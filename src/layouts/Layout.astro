@@ -1,0 +1,43 @@
+---
+import github from "/icons8-github.svg";
+import ampersand from "/icons8-ampersand-50.png";
+
+import asterisk from "/icons8-asterisk-48.png";
+export interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html data-theme="dracula" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <div class="navbar bg-base-100">
+    <div class="flex-1">
+      <img class="w-4 h-4" src={asterisk} alt="asterisk" />
+
+      <img class="w-4 h-4" src={ampersand} alt="ampersand" />
+      <a
+        href="https://github.com/bradleygichuru"
+        class="text-secondary m-2">bradleygichuru</a
+      >
+    </div>
+
+    <button class="btn btn-ghost">
+      <img class="w-4 h-4" src={github} alt="github" />
+      <a
+        href="https://github.com/bradleygichuru/portfolio"
+        class="text-secondary m-2">source</a
+      >
+    </button>
+  </div>
+
+  <slot />
+</html>

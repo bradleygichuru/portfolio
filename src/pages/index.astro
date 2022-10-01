@@ -1,0 +1,91 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import twitter from "/icons8-twitter.svg";
+import github from "/icons8-github.svg";
+
+const data = await fetch(
+  "https://gh-pinned-repos.egoist.dev/?username=bradleygichuru",
+  {
+    method: "GET",
+    headers: {
+      "Content-Type": "application//json",
+    },
+  }
+).then((r) => r.json());
+---
+
+<Layout title="Welcome to Astro.">
+  <main>
+    <div class="bg-neutral p-10 mx-5 rounded-xl">
+      <span class="mt-3 text-secondary font-extrabold">Bradley</span>
+      <p class="mt-3 text-secondary">Fullstack Developer and a Student</p>
+      <p class="mt-3 text-neutral-content">
+        Hello,I am Bradley Kabecha.I specialize in backend web development.I
+        have experience in web development and core javascript frameworks like
+        react and vue that are key on the front end of the web.I am also
+        proficient in nodejs and can create working backends for websites.I am
+        also literate in the field of cryptopgraphy that is the back bone of
+        upcoming technology like the blockchain.Since technology is still in
+        evolution state im receptive of change and willing to learn more as it
+        changes.
+      </p>
+    </div>
+
+    <div class="flex m-5 flex-col">
+      <span class="text-primary m-2">Reach me</span>
+
+      <div class="flex">
+        <img src={github} alt="github" />
+        <a href="https://github.com/bradleygichuru" class="text-secondary m-2"
+          >@bradleygichuru</a
+        >
+      </div>
+
+      <div class="flex">
+        <img class="" src={twitter} alt="twitter" />
+        <a href="https://twitter.com/@0x00bradley" class="text-secondary m-2"
+          >@0x00bradley</a
+        >
+      </div>
+    </div>
+
+    <span class="text-primary m-2">Projects</span>
+    <ul role="list" class="flex flex-wrap container mx-auto">
+      {
+        data.map(
+          (repo: {
+            owner: string;
+            repo: string;
+            link: string;
+            description: string;
+            image: string;
+            website: string;
+            language: string;
+            languageColor: string;
+            stars: string;
+            forks: number;
+          }) => (
+            <li class="m-2">
+              <div class="card w-72 card-compact bg-base-100 shadow-xl">
+                <figure>
+                  {" "}
+                  <img src={repo.image} alt={repo.repo} />{" "}
+                </figure>
+                <div class="card-body">
+                  <h2 class="card-title">{repo.repo}
+                    <div class="badge badge-secondary">{repo.language}</div> 
+                  </h2>
+                  <p>{repo.description}</p>
+                  <div class="card-actions justify-end">
+                    <a href={repo.link} class="btn btn-primary">view in github</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+          )
+        )
+      }
+    </ul>
+  </main>
+</Layout>
