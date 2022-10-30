@@ -22,15 +22,14 @@ jobs:
         uses: actions/checkout@v2
       - name: Install, build, and upload your site
         uses: withastro/action@v0
-  lint:
-    needs: build
+  unit_test-lint:
     runs-on: ubuntu-latest
     steps:
-      - name: eslint-astro
-        uses: actions/checkout@v2
-        run: |
+      - uses: actions/checkout@v2
+      - run: |
           npm ci
-          npm lint
+          npm run build
+          npm run lint
   deploy:
     needs: build
     runs-on: ubuntu-latest
