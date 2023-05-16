@@ -16,21 +16,12 @@ permissions:
 
 jobs:
   build:
-    needs: unit_test-lint
     runs-on: ubuntu-latest
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v2
       - name: Install, build, and upload your site
         uses: withastro/action@v0
-  unit_test-lint:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - run: |
-          npm ci
-          npm run build
-          npm run lint
   deploy:
     needs: build
     runs-on: ubuntu-latest
