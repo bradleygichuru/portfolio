@@ -1,132 +1,193 @@
 ---
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Github, Linkedin, Mail } from "lucide-react";
+import "@/styles/globals.css";
 import Layout from "../layouts/Layout.astro";
-import twitter from "/icons8-twitter.svg";
-import github from "/icons8-github.svg";
-const data = await fetch(
-  "https://gh-pinned-repos.egoist.dev/?username=bradleygichuru",
-  {
-    method: "GET",
-    headers: {
-      "Content-Type": "application//json",
-    },
-  }
-).then((r) => r.json());
+// const response = await fetch(
+//   "https://gh-pinned-repos.egoist.dev/?username=bradleygichuru",
+//   {
+//     method: "GET",
+//     headers: {
+//       "Content-Type": "application//json",
+//     },
+//   }
+// )
+// const data = await response.json()
 ---
 
-<Layout title="Welcome to Astro.">
-  <main>
-    <div class="bg-neutral p-10 mx-5 rounded-xl">
-      <span class="text-3xl font-bold text-primary">Bradley</span>
-      <p class="mt-3 text-secondary-content">Fullstack Developer </p>
-      <p class="mt-3 text-md font-medium md:text-xl custom:text-lg text-neutral-content">
-        Hello, I am Bradley Kabecha. I specialize in Full stack web development. My preferred stack is React for Frontend specifically using Nextjs,Mongodb and Mysql for database solution, express for lightweight backends and rust if a high perfomant backend is required. I mainly use typescript. Since technology is still in
-        evolution state im receptive of change and willing to learn more as it
-        changes.
-      </p>
-    </div>
-    
-    <div class="bg-neutral p-10 m-5 rounded-xl">
-      
-     <div class="my-16 px-3 font-sen text-white" id="skills">
+<Layout title="Bradley Gichuru.">
+  <div class="min-h-screen bg-background text-foreground">
+    <header class="p-6 bg-primary text-primary-foreground">
+      <h1 class="text-3xl font-bold">Bradley Gichuru</h1>
+      <p class="text-xl">Full Stack Developer</p>
+    </header>
 
-      <p class="text-3xl font-bold text-primary">Skills & Uses</p>
+    <main class="container mx-auto px-4 py-8">
+      <section class="mb-12">
+        <h2 class="text-2xl font-semibold mb-4">About Me</h2>
+        <Card>
+          <CardContent className="pt-6">
+            <div class="flex flex-col md:flex-row items-center gap-6">
+              <p class="text-lg">
+                Hello, I am Bradley Kabecha, a full-stack developer that
+                specializes in web development. I am an experienced in web
+                developer.Since technoology is still in evolution sate I amd
+                receptive of change and willing to learn more as it changes.
+              </p>
+            </div>
+          </CardContent>
+        </Card>
+      </section>
 
-      <div class="text-md my-8 flex flex-col font-medium md:text-xl custom:text-lg">
-        <p class="flex flex-row items-baseline border-b-[0.1px] border-gray-500 py-1 text-neutral-content">
-          <span class="text-white">Typescript </span>
-          &nbsp;as my main language
-        </p>
+      <section class="mb-12">
+        <h2 class="text-2xl font-semibold mb-4">Skills</h2>
+        <Card>
+          <CardContent className="pt-6">
+            <div class="flex flex-wrap gap-2">
+              {
+                [
+                  "JavaScript",
+                  "React",
+                  "Node.js",
+                  "Python",
+                  "SQL",
+                  "GraphQL",
+                  "Docker",
+                  "AWS",
+                  "Go",
+                  "Typescript",
+                  "Linux",
+                  "Sys Admin"
 
-        <p class="flex flex-row items-baseline border-b-[0.1px] border-gray-500 py-1 text-neutral-content">
-          <span class="text-white">NextJS</span>
-          &nbsp;as my Frontend Framework
-        </p>
-        <p class="flex flex-row items-baseline border-b-[0.1px] border-gray-500 py-1 text-neutral-content">
-          <span class="text-white">AstroJS</span>
-          &nbsp;for static websites 
-        </p> 
-        <p class="flex flex-row items-baseline border-b-[0.1px] border-gray-500 py-1 text-neutral-content">
-          <span class="text-white">Tailwind CSS </span>
-          &nbsp;as my CSS framework
-        </p>
+                ].map((skill) => (
+                  <Badge className="m-2" variant="secondary">
+                    {skill}
+                  </Badge>
+                ))
+              }
+            </div>
+          </CardContent>
+        </Card>
+      </section>
 
-        <p class="flex flex-row items-baseline border-b-[0.1px] border-gray-500 py-1 text-neutral-content">
-          <span class="text-white">Figma </span>
-          &nbsp;as my designing tool
-        </p>
+      <section class="mb-12">
+        <h2 class="text-2xl font-semibold mb-4">Projects</h2>
+        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {
+            [
+              {
+                title: "Newwell",
+                description:
+                  "I was contracted to work in a team to develop q Music Aggregation and Artist Music Analytics platform",
+                link: "https://web.newwell.app/",
+              },
+              {
+                title: "Hiziticket",
+                description: "A Event Ticket Vending Systems",
+                link: "https://hizitickets-t3.vercel.app",
+              },
+            ].map((project, index) => (
+              <Card key={index}>
+                <CardHeader>
+                  <CardTitle>{project.title}</CardTitle>
+                  <CardDescription>{project.description}</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button variant="outline">View Project</Button>
+                  </a>
+                </CardContent>
+              </Card>
+            ))
+          }
+          <!-- {
+            data.map(
+              (
+                repo: {
+                  owner: string;
+                  repo: string;
+                  link: string;
+                  description: string;
+                  image: string;
+                  website: string;
+                  language: string;
+                  languageColor: string;
+                  stars: string;
+                  forks: number;
+                },
+                index:number
+              ) => (
+                <Card key={index}>
+                  <CardHeader>
+                    <CardTitle>{repo.repo}</CardTitle>
+                    <CardDescription>{repo.description}</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <a
+                      href={repo.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Button variant="outline">View Project</Button>
+                    </a>
+                  </CardContent>
+                </Card>
+              )
+            )
+          } -->
+        </div>
+      </section>
 
-        <p class="flex flex-row items-baseline border-b-[0.1px] border-gray-500 py-1 text-neutral-content">
-          <span class="text-white">Express JS </span>
-          &nbsp;as my API framework
-        </p>
-<p class="flex flex-row items-baseline border-b-[0.1px] border-gray-500 py-1 text-neutral-content">
-          <span class="text-white">React</span>
-          
-        </p>
-<p class="flex flex-row items-baseline border-b-[0.1px] border-gray-500 py-1 text-neutral-content">
-          <span class="text-white">Angular</span>
-        </p>
-<p class="flex flex-row items-baseline border-b-[0.1px] border-gray-500 py-1 text-neutral-content">
-          <span class="text-white">Rust</span>
-        </p>
-      </div>  
-    </div>
-    </div>
+      <section>
+        <h2 class="text-2xl font-semibold mb-4">Contact</h2>
+        <Card>
+          <CardContent className="pt-6">
+            <div class="flex flex-col gap-4">
+              <a
+                href="mailto:bradleygichuru@gmail.com"
+                class="flex items-center gap-2"
+              >
+                <Mail className="h-5 w-5" />
+                bradleygichuru@gmail.com
+              </a>
+              <a
+                href="https://github.com/bradleygichuru"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center gap-2"
+              >
+                <Github className="h-5 w-5" />
+                github.com/bradleygichuru
+              </a>
+              <a
+                href="https://www.linkedin.com/in/bradley-kabecha-830678235/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center gap-2"
+              >
+                <Linkedin className="h-5 w-5" />
+                linkedin.com/in/bradley-kabecha-830678235
+              </a>
+            </div>
+          </CardContent>
+        </Card>
+      </section>
+    </main>
 
-    <div class="flex m-5 flex-col">
-      <span class="text-3xl my-10 font-bold text-primary">Reach me</span>
-
-      <div class="flex">
-        <img src={github} class="w-10 h-10" alt="github" />
-        <a href="https://github.com/bradleygichuru" class="text-secondary-content m-2 "
-          >@bradleygichuru</a
-        >
-      </div>
-
-      <div class="flex">
-        <img class="" src={twitter} alt="twitter" />
-        <a href="https://twitter.com/@0x00bradley" class="text-secondary-content m-2"
-          >@0x00bradley</a
-        >
-      </div>
-    </div>
-
-    <span class="text-primary m-5">Projects</span>
-    <ul role="list" class="flex flex-wrap m-5 container mx-auto">
-      {
-        data.map(
-          (repo: {
-            owner: string;
-            repo: string;
-            link: string;
-            description: string;
-            image: string;
-            website: string;
-            language: string;
-            languageColor: string;
-            stars: string;
-            forks: number;
-          }) => (
-            <li class="my-2 mx-auto">
-              <div class="card w-72 card-compact bg-base-100 shadow-xl">
-                <figure>
-                  {" "}
-                  <img src={repo.image} alt={repo.repo} />{" "}
-                </figure>
-                <div class="card-body">
-                  <h2 class="card-title">{repo.repo}
-                    <div class="badge badge-secondary">{repo.language}</div> 
-                  </h2>
-                  <p>{repo.description}</p>
-                  <div class="card-actions justify-end">
-                    <a href={repo.link} class="btn btn-primary">view in github</a>
-                  </div>
-                </div>
-              </div>
-            </li>
-          )
-        )
-      }
-    </ul>
-  </main>
+    <footer class="p-6 bg-primary text-primary-foreground mt-12 text-center">
+      <p>&copy; 2024 John Doe. All rights reserved.</p>
+    </footer>
+  </div>
 </Layout>

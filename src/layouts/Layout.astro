@@ -1,8 +1,6 @@
 ---
-import github from "/icons8-github.svg";
-import ampersand from "/icons8-ampersand-50.png";
 
-import asterisk from "/icons8-asterisk-48.png";
+import { Github, Linkedin, Mail,Asterisk,Ampersand } from 'lucide-react'
 export interface Props {
   title: string;
 }
@@ -11,7 +9,7 @@ const { title } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html data-theme="coffee" lang="en">
+<html  lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -19,18 +17,6 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <div class="navbar bg-base-100">
-    <div class="flex-1">
-      <img class="w-4 h-4" src={asterisk} alt="asterisk" />
-
-      <img class="w-4 h-4" src={ampersand} alt="ampersand" />
-      <a
-        href="https://github.com/bradleygichuru"
-        class="m-2 text-3xl font-bold text-primary">bradleygichuru</a
-      >
-    </div>
-
-  </div>
-
+ 
   <slot />
 </html>
