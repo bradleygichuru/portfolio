@@ -24,19 +24,19 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Bradley Gichuru.">
-  <div class="min-h-screen bg-background text-foreground">
-    <header class="p-6 bg-primary text-primary-foreground">
-      <h1 class="text-3xl font-bold">Bradley Gichuru</h1>
-      <p class="text-xl">Full Stack Developer</p>
+  <div className="min-h-screen bg-background text-foreground">
+    <header className="p-6 bg-primary text-primary-foreground">
+      <h1 className="text-3xl font-bold">Bradley Gichuru</h1>
+      <p className="text-xl">Full Stack Developer</p>
     </header>
 
-    <main class="container mx-auto px-4 py-8">
-      <section class="mb-12">
-        <h2 class="text-2xl font-semibold mb-4">About Me</h2>
+    <main className="container mx-auto px-4 py-8">
+      <section className="mb-12">
+        <h2 className="text-2xl font-semibold mb-4">About Me</h2>
         <Card>
           <CardContent className="pt-6">
-            <div class="flex flex-col md:flex-row items-center gap-6">
-              <p class="text-lg">
+            <div className="flex flex-col md:flex-row items-center gap-6">
+              <p className="text-lg">
                 Hello, I am Bradley Kabecha, a full-stack developer that
                 specializes in web development. I am an experienced in web
                 developer.Since technoology is still in evolution sate I amd
@@ -47,11 +47,11 @@ import Layout from "../layouts/Layout.astro";
         </Card>
       </section>
 
-      <section class="mb-12">
-        <h2 class="text-2xl font-semibold mb-4">Skills</h2>
+      <section className="mb-12">
+        <h2 className="text-2xl font-semibold mb-4">Skills</h2>
         <Card>
           <CardContent className="pt-6">
-            <div class="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2">
               {
                 [
                   "JavaScript",
@@ -78,9 +78,9 @@ import Layout from "../layouts/Layout.astro";
         </Card>
       </section>
 
-      <section class="mb-12">
-        <h2 class="text-2xl font-semibold mb-4">Projects</h2>
-        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <section className="mb-12">
+        <h2 className="text-2xl font-semibold mb-4">Projects</h2>
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {
             [
               {
@@ -151,13 +151,13 @@ import Layout from "../layouts/Layout.astro";
       </section>
 
       <section>
-        <h2 class="text-2xl font-semibold mb-4">Contact</h2>
+        <h2 className="text-2xl font-semibold mb-4">Contact</h2>
         <Card>
           <CardContent className="pt-6">
-            <div class="flex flex-col gap-4">
+            <div className="flex flex-col gap-4">
               <a
                 href="mailto:bradleygichuru@gmail.com"
-                class="flex items-center gap-2"
+                className="flex items-center gap-2"
               >
                 <Mail className="h-5 w-5" />
                 bradleygichuru@gmail.com
@@ -166,7 +166,7 @@ import Layout from "../layouts/Layout.astro";
                 href="https://github.com/bradleygichuru"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="flex items-center gap-2"
+                className="flex items-center gap-2"
               >
                 <Github className="h-5 w-5" />
                 github.com/bradleygichuru
@@ -175,7 +175,7 @@ import Layout from "../layouts/Layout.astro";
                 href="https://www.linkedin.com/in/bradley-kabecha-830678235/"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="flex items-center gap-2"
+                className="flex items-center gap-2"
               >
                 <Linkedin className="h-5 w-5" />
                 linkedin.com/in/bradley-kabecha-830678235
@@ -186,7 +186,7 @@ import Layout from "../layouts/Layout.astro";
       </section>
     </main>
 
-    <footer class="p-6 bg-primary text-primary-foreground mt-12 text-center">
+    <footer className="p-6 bg-primary text-primary-foreground mt-12 text-center">
       <p>&copy; 2024 John Doe. All rights reserved.</p>
     </footer>
   </div>
