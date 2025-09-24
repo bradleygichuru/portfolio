@@ -35,7 +35,7 @@ import Layout from "../layouts/Layout.astro";
         <h2 class="text-2xl font-semibold mb-4">About Me</h2>
         <Card>
           <CardContent class="pt-6">
-            <div class="flex flex-col md:flex-row items-center gap-6">
+            <div class="flex flex-col md:flex-row items-center gap-6 my-4">
               <p class="text-lg">
                 Hello, I am Bradley Kabecha, a full-stack developer that
                 specializes in web development.Since technology is still in evolution state, I am
@@ -50,11 +50,12 @@ import Layout from "../layouts/Layout.astro";
         <h2 class="text-2xl font-semibold mb-4">Skills</h2>
         <Card>
           <CardContent class="pt-6">
-            <div class="flex flex-wrap gap-2">
+            <div class="flex flex-wrap gap-2 my-4">
               {
                 [
                   "JavaScript",
-                  "React",
+							"React",
+							"Flutter",
                   "Node.js",
                   "Python",
                   "SQL",
@@ -98,6 +99,11 @@ import Layout from "../layouts/Layout.astro";
                 title: "Towing guru",
                 description: "A price estimator for a small towing company based in the US",
                 link: "https://towingguru.net/",
+					},
+{
+                title: "Budgetlite",
+                description: "An expense tracker and budgeting app tailored for the East African market",
+                link: "https://github.com/bradleygichuru/budgetlite-appcast/releases",
               }
             ].map((project, index) => (
               <Card key={index}>
