@@ -6,201 +6,236 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
+  CardFooter,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail, ExternalLink, ArrowRight, Phone } from "lucide-react";
 import "@/styles/globals.css";
 import Layout from "../layouts/Layout.astro";
-// const response = await fetch(
-//   "https://gh-pinned-repos.egoist.dev/?username=bradleygichuru",
-//   {
-//     method: "GET",
-//     headers: {
-//       "Content-Type": "application//json",
-//     },
-//   }
-// )
-// const data = await response.json()
+
+const skills = [
+  "React", "TypeScript", "Vue", "Tailwind CSS",
+  "Flutter", "React Native",
+  "Node.js", "Python", "Go", "GraphQL",
+  "Docker", "AWS", "Linux",
+  "PostgreSQL", "MySQL", "MongoDB",
+];
+
+const featuredProjects = [
+  {
+    title: "Newwell",
+    description: "Music Aggregation and Artist Music Analytics platform",
+    link: "https://web.newwell.app/",
+    featured: true,
+    gradient: "from-emerald-500 to-teal-600",
+  },
+  {
+    title: "Hizitickets",
+    description: "Event Ticket Vending Systems - A modern ticketing platform for events and venues",
+    link: "https://hizitickets.com",
+    featured: true,
+    gradient: "from-violet-500 to-purple-600",
+  },
+  {
+    title: "Towing Guru",
+    description: "A price estimator for a small towing company based in the US",
+    link: "https://towingguru.net/",
+    featured: true,
+    gradient: "from-amber-500 to-orange-600",
+  },
+];
+
+const otherProjects = [
+  {
+    title: "Budgetlite",
+    description: "An expense tracker and budgeting app tailored for the East African market",
+    link: "https://budgetlite-nextjs.vercel.app/",
+  },
+];
+
+const socials = [
+  { icon: Phone, label: "Phone", href: "tel:+254768085236", text: "+254 768 085 236", color: "text-blue-500" },
+  { icon: Mail, label: "Email", href: "mailto:bradleygichuru@gmail.com", text: "bradleygichuru@gmail.com", color: "text-red-500" },
+  { icon: Github, label: "GitHub", href: "https://github.com/bradleygichuru", text: "github.com/bradleygichuru", color: "text-gray-600 dark:text-gray-400" },
+  { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/bradley-kabecha-830678235/", text: "linkedin.com/in/bradley-kabecha", color: "text-blue-700" },
+];
 ---
 
-<Layout title="Bradley Gichuru.">
+<Layout title="Bradley Gichuru | Full Stack Developer" description="Full Stack Developer specializing in web and mobile development">
   <div class="min-h-screen bg-background text-foreground">
-    <header class="p-6 bg-primary text-primary-foreground">
-      <h1 class="text-3xl font-bold">Bradley Gichuru</h1>
-      <p class="text-xl">Full Stack Developer</p>
-    </header>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-primary focus:text-primary-foreground rounded-md">
+      Skip to main content
+    </a>
 
-    <main class="container mx-auto px-4 py-8">
-      <section class="mb-12">
-        <h2 class="text-2xl font-semibold mb-4">About Me</h2>
-        <Card>
-          <CardContent class="pt-6">
-            <div class="flex flex-col md:flex-row items-center gap-6 my-4">
-              <p class="text-lg">
-                Hello, I am Bradley Kabecha, a full-stack developer that
-                specializes in web development.Since technology is still in evolution state, I am
-                receptive of change and willing to learn more as it evolves.
-              </p>
-            </div>
+    <!-- Hero Section -->
+    <section id="main" class="relative py-20 md:py-32 overflow-hidden">
+      <!-- Background decoration -->
+      <div class="absolute inset-0 -z-10">
+        <div class="absolute top-20 left-1/4 w-64 h-64 bg-violet-500/20 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-20 right-1/4 w-48 h-48 bg-emerald-500/15 rounded-full blur-3xl"></div>
+      </div>
+
+      <div class="container mx-auto px-4 max-w-2xl">
+        <div class="text-center max-w-2xl mx-auto">
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4 font-[var(--font-heading)]">
+            Bradley Gichuru
+          </h1>
+          <p class="text-lg md:text-xl text-muted-foreground mb-8">
+            Full Stack Developer
+          </p>
+          <p class="text-muted-foreground max-w-md mx-auto leading-relaxed">
+            Building web and mobile experiences with modern technologies.
+            Passionate about creating products that matter.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="py-16">
+      <div class="container mx-auto px-4 max-w-5xl">
+        <Card class="max-w-2xl mx-auto">
+          <CardHeader>
+            <CardTitle class="text-xl">About Me</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p class="text-muted-foreground leading-relaxed">
+              I'm Bradley Kabecha, a full-stack developer specializing in web development.
+              I build products that solve real problems, from music analytics platforms
+              to event ticketing systems. Since technology is still in an evolving state,
+              I'm always receptive to change and willing to learn more as it evolves.
+            </p>
           </CardContent>
         </Card>
-      </section>
+      </div>
+    </section>
 
-      <section class="mb-12">
-        <h2 class="text-2xl font-semibold mb-4">Skills</h2>
-        <Card>
-          <CardContent class="pt-6">
-            <div class="flex flex-wrap gap-2 my-4">
-              {
-                [
-                  "JavaScript",
-							"React",
-							"Flutter",
-                  "Node.js",
-                  "Python",
-                  "SQL",
-                  "GraphQL",
-                  "Docker",
-                  "AWS",
-                  "Go",
-                  "Typescript",
-                  "Linux",
-                  "Sys Admin",
-                  "Devops"
+    <!-- Featured Projects -->
+    <section class="py-16">
+      <div class="container mx-auto px-4 max-w-5xl">
+        <div class="flex items-center gap-2 mb-8">
+          <h2 class="text-2xl font-semibold font-[var(--font-heading)]">Featured Work</h2>
+          <span class="w-8 h-0.5 bg-gradient-to-r from-violet-500 to-emerald-500 rounded-full"></span>
+        </div>
 
-                ].map((skill) => (
-                  <Badge class="m-2" variant="secondary">
-                    {skill}
-                  </Badge>
-                ))
-              }
-            </div>
-          </CardContent>
-        </Card>
-      </section>
-
-      <section class="mb-12">
-        <h2 class="text-2xl font-semibold mb-4">Projects</h2>
         <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {
-            [
-              {
-                title: "Newwell",
-                description:
-                  "I was contracted to work in a team to develop  Music Aggregation and Artist Music Analytics platform",
-                link: "https://web.newwell.app/",
-              },
-{
-                title: "Towing guru",
-                description: "A price estimator for a small towing company based in the US",
-                link: "https://towingguru.net/",
-					},
-{
-                title: "Budgetlite",
-                description: "An expense tracker and budgeting app tailored for the East African market",
-                link: "https://budgetlite-nextjs.vercel.app/",
-		},
-
-              {
-                title: "Hizitickets",
-                description: "A Event Ticket Vending Systems",
-                link: "https://hizitickets-t3.vercel.app",
-              },
-
-            ].map((project, index) => (
-              <Card key={index}>
+          {featuredProjects.map((project) => (
+            <a
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="group relative block"
+            >
+              <div class={`absolute inset-0 rounded-2xl bg-gradient-to-br ${project.gradient} opacity-10 group-hover:opacity-20 transition-opacity duration-300`}></div>
+              <Card class="relative overflow-hidden border-border/50 dark:border-border/30 hover:border-violet-500/50 hover:shadow-lg hover:shadow-violet-500/10 transition-all duration-300">
                 <CardHeader>
-                  <CardTitle>{project.title}</CardTitle>
+                  <div class="flex items-center justify-between">
+                    <CardTitle class="text-xl group-hover:text-violet-500 transition-colors">
+                      {project.title}
+                    </CardTitle>
+                    <ExternalLink class="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  </div>
                   <CardDescription>{project.description}</CardDescription>
                 </CardHeader>
-                <CardContent>
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Button variant="outline">View Project</Button>
-                  </a>
-                </CardContent>
+                <CardFooter>
+                  <span class="text-sm text-muted-foreground flex items-center gap-1 group-hover:text-violet-500 transition-colors">
+                    View Project <ArrowRight class="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </span>
+                </CardFooter>
               </Card>
-            ))
-          }
-          <!-- {
-            data.map(
-              (
-                repo: {
-                  owner: string;
-                  repo: string;
-                  link: string;
-                  description: string;
-                  image: string;
-                  website: string;
-                  language: string;
-                  languageColor: string;
-                  stars: string;
-                  forks: number;
-                },
-                index:number
-              ) => (
-                <Card key={index}>
-                  <CardHeader>
-                    <CardTitle>{repo.repo}</CardTitle>
-                    <CardDescription>{repo.description}</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <a
-                      href={repo.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Button variant="outline">View Project</Button>
-                    </a>
-                  </CardContent>
-                </Card>
-              )
-            )
-          } -->
+            </a>
+          ))}
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section>
-        <h2 class="text-2xl font-semibold mb-4">Contact</h2>
-        <Card>
-          <CardContent class="pt-6">
-            <div class="flex flex-col gap-4 my-4">
-              <a
-                href="mailto:bradleygichuru@gmail.com"
-                class="flex items-center gap-2"
-              >
-                <Mail class="h-5 w-5" />
-                bradleygichuru@gmail.com
-              </a>
-              <a
-                href="https://github.com/bradleygichuru"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="flex items-center gap-2"
-              >
-                <Github class="h-5 w-5" />
-                github.com/bradleygichuru
-              </a>
-              <a
-                href="https://www.linkedin.com/in/bradley-kabecha-830678235/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="flex items-center gap-2"
-              >
-                <Linkedin class="h-5 w-5" />
-                linkedin.com/in/bradley-kabecha-830678235
-              </a>
+    <!-- Skills -->
+    <section class="py-16 bg-gradient-to-b from-muted/20 to-transparent dark:from-muted/5 dark:to-transparent">
+      <div class="container mx-auto px-4 max-w-5xl">
+        <h2 class="text-2xl font-semibold mb-8 font-[var(--font-heading)]">Skills & Technologies</h2>
+
+        <div class="flex flex-wrap gap-2">
+          {skills.map((skill) => (
+            <Badge
+              variant="secondary"
+              class="hover:bg-violet-500/10 hover:text-violet-600 dark:hover:text-violet-400 hover:border-violet-500/50 transition-all duration-200 cursor-default"
+            >
+              {skill}
+            </Badge>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Other Projects -->
+    <section class="py-16">
+      <div class="container mx-auto px-4 max-w-5xl">
+        <h2 class="text-2xl font-semibold mb-8 font-[var(--font-heading)]">Other Projects</h2>
+
+        <div class="grid gap-6 md:grid-cols-2">
+          {otherProjects.map((project) => (
+            <a
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="group"
+            >
+              <Card class="h-full hover:border-violet-500/50 dark:hover:border-violet-500/30 transition-all duration-300">
+                <CardHeader>
+                  <CardTitle class="text-lg group-hover:text-violet-500 transition-colors">
+                    {project.title}
+                  </CardTitle>
+                  <CardDescription>{project.description}</CardDescription>
+                </CardHeader>
+                <CardFooter>
+                  <Button variant="ghost" size="sm" class="group-hover:translate-x-1 transition-transform">
+                    View <ExternalLink class="w-4 h-4 ml-1" />
+                  </Button>
+                </CardFooter>
+              </Card>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="py-16 bg-gradient-to-b from-transparent to-muted/20 dark:to-muted/5">
+      <div class="container mx-auto px-4 max-w-5xl">
+        <Card class="max-w-md mx-auto">
+          <CardHeader>
+            <CardTitle class="text-xl text-center">Get In Touch</CardTitle>
+            <CardDescription class="text-center">
+              Interested in working together or just want to say hi?
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div class="space-y-4">
+              {socials.map((social) => (
+                <a
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="flex items-center gap-3 p-3 rounded-lg hover:bg-muted dark:hover:bg-muted/50 transition-colors group"
+                >
+                  <social.icon class={`w-5 h-5 ${social.color} group-hover:scale-110 transition-transform` } />
+                  <span class="text-sm font-medium">{social.text}</span>
+                </a>
+              ))}
             </div>
           </CardContent>
         </Card>
-      </section>
-    </main>
+      </div>
+    </section>
 
-    <!-- <footer class="p-6 bg-primary text-primary-foreground mt-12 text-center"> -->
-    <!--   <p>&copy; 2024 John Doe. All rights reserved.</p> -->
-    <!-- </footer> -->
+    <!-- Footer -->
+    <footer class="py-8 border-t border-gradient-to-r from-transparent via-violet-500/30 to-transparent">
+      <div class="container mx-auto px-4 max-w-5xl text-center">
+        <p class="text-sm text-muted-foreground">
+          &copy; {new Date().getFullYear()} Bradley Gichuru. All rights reserved.
+        </p>
+      </div>
+    </footer>
   </div>
 </Layout>
