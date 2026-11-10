@@ -35,7 +35,7 @@ function buildIndex(): SearchResult[] {
       id: `app-${app}`,
       kind: "Application" as const,
       title: APP_NAMES[app],
-      subtitle: "Application",
+      subtitle: APP_SUBTITLES[app] ?? "Application",
       keywords: `${APP_NAMES[app]} app application`.toLowerCase(),
       app,
     })),
@@ -43,7 +43,7 @@ function buildIndex(): SearchResult[] {
       id: "app-welcome",
       kind: "Application",
       title: "Welcome",
-      subtitle: "Application",
+      subtitle: "Start here",
       keywords: "welcome home start",
       app: "welcome",
     },
@@ -87,12 +87,24 @@ function buildIndex(): SearchResult[] {
   return results;
 }
 
+const APP_SUBTITLES: Record<string, string> = {
+  work: "Projects and live work",
+  about: "About Bradley",
+  skills: "Skills and commands",
+  contact: "Contact and channels",
+  web: "Project pages",
+  aboutMac: "System card",
+  welcome: "Start here",
+  trash: "Empty state",
+};
+
 const INDEX = buildIndex();
 
 export function Spotlight({ open, onClose, onOpen, onReader }: SpotlightProps) {
   const [query, setQuery] = useState("");
   const [selected, setSelected] = useState(0);
   const inputRef = useRef<HTMLInputElement | null>(null);
+  const closeRef = useRef<HTMLButtonElement | null>(null);
   const triggerRef = useRef<HTMLElement | null>(null);
 
   const results = useMemo(() => {
@@ -148,6 +160,7 @@ export function Spotlight({ open, onClose, onOpen, onReader }: SpotlightProps) {
     }
     if (event.key === "Tab") {
       event.preventDefault();
+      closeRef.current?.focus();
       return;
     }
     if (event.key === "ArrowDown") {
@@ -204,6 +217,25 @@ export function Spotlight({ open, onClose, onOpen, onReader }: SpotlightProps) {
           <span className="spotlight-hint" aria-hidden="true">
             Ctrl K
           </span>
+          <button
+            ref={closeRef}
+            type="button"
+            className="spotlight-close"
+            aria-label="Close search"
+            onClick={onClose}
+            onKeyDown={(event: ReactKeyboardEvent<HTMLButtonElement>) => {
+              if (event.key === "Escape") {
+                event.preventDefault();
+                onClose();
+              }
+              if (event.key === "Tab") {
+                event.preventDefault();
+                inputRef.current?.focus();
+              }
+            }}
+          >
+            Cancel
+          </button>
         </div>
 
         <p className="visually-hidden" aria-live="polite">

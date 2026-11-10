@@ -1,27 +1,28 @@
 # Bradley Gichuru — Portfolio OS
 
-A full-bleed desktop portfolio that opens as **Portfolio OS**: a desktop-OS-inspired interface with a menu bar, dock, draggable windows, Search, Apps, Controls, and a working local Terminal. The ground is the user-supplied violet ASCII-hands artwork; the windows are light by default, with dark mode available. The metaphor is borrowed; the naming, icons, and brand are original. There is no laptop hardware around it — the screen is the page.
+A full-bleed **Portfolio OS** that adapts to the device. Tablets and larger screens get a macOS-inspired desktop with a menu bar, dock, draggable windows, Search, Apps, Controls, and a working local Terminal. Phones get an iOS-inspired home screen with a status bar, welcome widget, four-column app grid, Search pill, four-icon dock, and full-screen apps. The ground is the user-supplied violet ASCII-hands artwork; windows are light by default, with dark mode available. The metaphor is borrowed; the naming, icons, and brand are original. There is no hardware frame — the screen is the page.
 
 ## The idea
 
-The desktop is the portfolio. The welcome window names Bradley, gives the one-line thesis, and puts the four live projects and the three ways in (Work, About, Say Hello) in the first view. Apps carry the content:
+The OS is the portfolio. On larger screens the welcome window names Bradley, gives the one-line thesis, and puts the four live projects and the three ways in (Work, About, Say Hello) in the first view. On phones the welcome widget does the same above the app grid. Apps carry the content:
 
-- **Work** — a Finder-like project browser with a sidebar, project grid/list, preview, and live links.
+- **Work** — a project browser with a sidebar, project grid/list, preview, and live links.
 - **Notes** — About Bradley, the vitals, and the toolkit.
 - **Terminal** — an interactive local command line for skills, projects, contact, opening apps, and the reader.
 - **Mail** — the contact channels, real `mailto:` / `tel:` / social links, and copy-email feedback.
-- **Web** — a Safari-style project page for Newwell, Hizitickets, Towing Guru, and Budgetlite.
-- **About This Portfolio** — the "About This Mac"-style system card.
-- **Search (Ctrl K / Cmd K)**, **Apps**, **Controls**, light/dark mode, brightness, Sleep, Restart, and a desktop context menu.
+- **Web** — a browser-style project page for Newwell, Hizitickets, Towing Guru, and Budgetlite.
+- **About This Portfolio** — the system card.
+- **Search**, **Apps**, **Controls**, light/dark mode, brightness, Sleep, Restart, and a desktop context menu on larger screens.
+- **Phone home** — iOS-style status bar, welcome widget, app grid, Search sheet, Controls sheet, and full-screen app views.
 
-The **reader** below the desktop is the flat, printable edition with every project, skill, and contact link.
+The **reader** below the OS is the flat, printable edition with every project, skill, and contact link. On a phone it is a full-width document with a sticky bar and **Back to home**.
 
 ## Stack
 
 - Astro 5 + React 19 + Tailwind's base reset
-- Hand-written OS CSS in `src/styles/desktop.css`
+- Hand-written OS CSS in `src/styles/desktop.css` and `src/styles/ios.css`
 - Lucide icons and an original SVG app-icon set
-- No external fonts: the system UI stack, system mono, and Georgia for the B mark
+- No external fonts: the system UI stack and system mono; the B is an authored SVG path
 - No backend, no real shell, no live AI
 
 ## Commands
@@ -40,31 +41,33 @@ The site is configured for GitHub Pages at `/portfolio`, so the local dev URL is
 ```
 src/
 ├── components/os/
-│   ├── PortfolioOS.tsx     Desktop state, windows, wallpaper, overlays
+│   ├── PortfolioOS.tsx     Shared state, macOS desktop, windows, overlays
+│   ├── MobileOS.tsx        iOS home, app stack, Search and Controls
 │   ├── apps.tsx            Welcome, Work, Notes, Terminal, Mail, Web, About, Trash
 │   ├── MenuBar.tsx         Menus, clock, Controls
 │   ├── Dock.tsx            Dock, running dots, Apps entry
 │   ├── OSWindow.tsx        Draggable window chrome and traffic lights
-│   ├── Spotlight.tsx       Ctrl/Cmd-K search (component name)
-│   ├── Launchpad.tsx       App grid (component name)
+│   ├── Spotlight.tsx       Search overlay (used by desktop and phone)
+│   ├── Launchpad.tsx       Desktop app grid (component name)
 │   ├── icons.tsx           Original app icons and the B mark
 │   └── types.ts            App and window definitions
 ├── assets/wallpaper.webp   Supplied violet ASCII-hands artwork (WebP)
 ├── data/portfolio.ts       Real projects, skills, contact, bio
 ├── pages/index.astro       Portfolio OS + reader edition
 ├── layouts/Layout.astro    Metadata, fonts, global CSS
-└── styles/desktop.css      The desktop, windows, apps, responsive and print
+├── styles/desktop.css      macOS desktop, windows, apps, responsive and print
+└── styles/ios.css          Phone home, app views, sheets, and mobile reader
 ```
 
 ## Interaction notes
 
-- **Windows:** drag by the title bar, close/minimize/zoom with the traffic lights, or use **Window → Move Left / Move Right / Center** as a non-drag alternative.
-- **Keyboard:** Ctrl/Cmd K opens Search; Escape closes menus and overlays; focus returns to the trigger.
-- **Appearance:** light windows by default; Controls switches to dark. The supplied artwork stays fixed while the windows, menu bar, and dock restage.
-- **Reduced motion:** the screen-on, window and notification motion is removed.
-- **Touch:** the desktop becomes a full-screen window stack with a floating welcome card and the dock.
-- **No JavaScript:** the welcome and desktop are static; the reader below carries every project, skill, and contact detail.
-- **Print:** the reader prints on white; the desktop is hidden.
+- **Larger screens:** drag windows by the title bar, close/minimize/zoom with the traffic lights, or use **Window → Move Left / Move Right / Center** as a non-drag alternative. Ctrl/Cmd K opens Search; Escape closes menus and overlays; focus returns to the trigger.
+- **Phones:** the macOS shell is replaced at 600px (and phone-height landscape) by an iOS-style home. Tap an app, use **Back** or **Home** in the app bar, open Search from the pill, and open Controls from the status bar or widget. The app grid scrolls on short screens; landscape uses a two-column home.
+- **Appearance:** light windows by default; Controls switches to dark. The supplied artwork stays fixed while the surfaces and chrome restage.
+- **Reduced motion:** the screen-on, window, notification, sheet, and dock motion is removed.
+- **Touch:** phone controls are 44px; the desktop windows become a compact tablet stack between 601px and 900px.
+- **No JavaScript:** the welcome or widget and the OS frame are static; the reader below carries every project, skill, and contact detail.
+- **Print:** the reader prints on white; the OS is hidden.
 
 ## Content
 

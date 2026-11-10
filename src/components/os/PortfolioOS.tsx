@@ -11,6 +11,7 @@ import { Dock } from "./Dock";
 import { OSWindow } from "./OSWindow";
 import { Spotlight } from "./Spotlight";
 import { Launchpad } from "./Launchpad";
+import MobileOS from "./MobileOS";
 import {
   APP_DEFS,
   type AppId,
@@ -323,7 +324,7 @@ export default function PortfolioOS() {
           "--os-wallpaper-image": `url(${wallpaper.src})`,
         } as CSSProperties
       }
-      aria-label="Bradley Gichuru's Portfolio OS desktop"
+      aria-label="Bradley Gichuru's Portfolio OS"
       onContextMenu={onContextMenu}
     >
       <div className="os-screen">
@@ -547,6 +548,16 @@ export default function PortfolioOS() {
           onOpen={openApp}
         />
       </div>
+
+      <MobileOS
+        theme={theme}
+        setTheme={setTheme}
+        brightness={brightness}
+        setBrightness={setBrightness}
+        focusMode={focusMode}
+        setFocusMode={setFocusMode}
+        reader={reader}
+      />
     </main>
   );
 }

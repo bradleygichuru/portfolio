@@ -40,7 +40,13 @@ const ICONS: Record<string, LucideIcon> = {
       .os-notification,
       .welcome-actions,
       .welcome-recent,
-      .welcome-tip {
+      .welcome-tip,
+      .ios-app-grid,
+      .ios-dock,
+      .ios-search-pill,
+      .ios-widget-actions,
+      .ios-widget-foot,
+      .ios-status-actions {
         display: none !important;
       }
       .welcome-app {
@@ -52,8 +58,8 @@ const ICONS: Record<string, LucideIcon> = {
       }
     </style>
     <p class="noscript-banner">
-      JavaScript is off — this desktop is static. The README below has every
-      project, skill, and contact detail.
+      JavaScript is off — this portfolio screen is static. The README below
+      has every project, skill, and contact detail.
     </p>
   </noscript>
 
@@ -66,7 +72,10 @@ const ICONS: Record<string, LucideIcon> = {
           <span></span><span></span><span></span>
         </span>
         <span class="reader-title">README.md — Editor</span>
-        <a class="reader-back" href="#desktop">Back to desktop</a>
+        <a class="reader-back" href="#desktop">
+          <span class="reader-back-desktop">Back to desktop</span>
+          <span class="reader-back-mobile">Back to home</span>
+        </a>
       </div>
 
       <div class="reader-body">
@@ -75,7 +84,7 @@ const ICONS: Record<string, LucideIcon> = {
         <p class="reader-lede">
           I build web and mobile products with modern technologies — and care
           about the details that make them matter. This is the flat edition of
-          the desktop, with every project, skill, and contact link in one place.
+          the portfolio, with every project, skill, and contact link in one place.
         </p>
 
         <section class="reader-section" aria-labelledby="reader-about">
@@ -159,7 +168,8 @@ const ICONS: Record<string, LucideIcon> = {
           <span>End of README.md · {SITE.os}</span>
           <a href="#desktop">
             <ArrowUp size={12} aria-hidden="true" />
-            Back to desktop
+            <span class="reader-foot-desktop">Back to desktop</span>
+            <span class="reader-foot-mobile">Back to home</span>
           </a>
         </div>
       </div>

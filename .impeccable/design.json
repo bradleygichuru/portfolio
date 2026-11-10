@@ -136,6 +136,60 @@
         "canonical": "#f3c17a",
         "tonalRamp": ["oklch(18% 0.06 75)", "oklch(28% 0.08 75)", "oklch(38% 0.10 75)", "oklch(48% 0.11 75)", "oklch(58% 0.12 75)", "oklch(70% 0.12 75)", "oklch(82% 0.10 75)", "oklch(94% 0.05 75)"]
       },
+      "ios-glass": {
+        "role": "neutral",
+        "displayName": "Phone Glass",
+        "canonical": "rgba(18,16,26,0.58)",
+        "tonalRamp": ["oklch(15% 0.01 285)", "oklch(24% 0.01 285)", "oklch(34% 0.01 285)", "oklch(44% 0.01 285)", "oklch(54% 0.01 285)", "oklch(68% 0.01 285)", "oklch(80% 0.01 285)", "oklch(94% 0.01 285)"]
+      },
+      "ios-glass-border": {
+        "role": "neutral",
+        "displayName": "Phone Glass Edge",
+        "canonical": "rgba(255,255,255,0.18)",
+        "tonalRamp": ["oklch(18% 0.005 285)", "oklch(28% 0.005 285)", "oklch(38% 0.005 285)", "oklch(48% 0.005 285)", "oklch(58% 0.005 285)", "oklch(70% 0.005 285)", "oklch(82% 0.005 285)", "oklch(96% 0.005 285)"]
+      },
+      "ios-scrim": {
+        "role": "neutral",
+        "displayName": "Phone Scrim",
+        "canonical": "rgba(6,4,10,0.55)",
+        "tonalRamp": ["oklch(12% 0.01 285)", "oklch(22% 0.01 285)", "oklch(32% 0.01 285)", "oklch(42% 0.01 285)", "oklch(54% 0.01 285)", "oklch(68% 0.01 285)", "oklch(82% 0.01 285)", "oklch(95% 0.01 285)"]
+      },
+      "ios-widget-shadow": {
+        "role": "neutral",
+        "displayName": "Phone Widget Shadow",
+        "canonical": "rgba(0,0,0,0.28)",
+        "tonalRamp": ["oklch(10% 0 0)", "oklch(22% 0 0)", "oklch(34% 0 0)", "oklch(46% 0 0)", "oklch(58% 0 0)", "oklch(70% 0 0)", "oklch(82% 0 0)", "oklch(95% 0 0)"]
+      },
+      "ios-dock-shadow": {
+        "role": "neutral",
+        "displayName": "Phone Dock Shadow",
+        "canonical": "rgba(0,0,0,0.32)",
+        "tonalRamp": ["oklch(10% 0 0)", "oklch(22% 0 0)", "oklch(34% 0 0)", "oklch(46% 0 0)", "oklch(58% 0 0)", "oklch(70% 0 0)", "oklch(82% 0 0)", "oklch(95% 0 0)"]
+      },
+      "ios-sheet-shadow": {
+        "role": "neutral",
+        "displayName": "Phone Sheet Shadow",
+        "canonical": "rgba(0,0,0,0.32)",
+        "tonalRamp": ["oklch(10% 0 0)", "oklch(22% 0 0)", "oklch(34% 0 0)", "oklch(46% 0 0)", "oklch(58% 0 0)", "oklch(70% 0 0)", "oklch(82% 0 0)", "oklch(95% 0 0)"]
+      },
+      "ios-icon-shadow": {
+        "role": "neutral",
+        "displayName": "Phone Icon Shadow",
+        "canonical": "rgba(0,0,0,0.35)",
+        "tonalRamp": ["oklch(10% 0 0)", "oklch(22% 0 0)", "oklch(34% 0 0)", "oklch(46% 0 0)", "oklch(58% 0 0)", "oklch(70% 0 0)", "oklch(82% 0 0)", "oklch(95% 0 0)"]
+      },
+      "ios-label-shadow": {
+        "role": "neutral",
+        "displayName": "Phone Label Shadow",
+        "canonical": "rgba(0,0,0,0.65)",
+        "tonalRamp": ["oklch(10% 0 0)", "oklch(22% 0 0)", "oklch(34% 0 0)", "oklch(46% 0 0)", "oklch(58% 0 0)", "oklch(70% 0 0)", "oklch(82% 0 0)", "oklch(95% 0 0)"]
+      },
+      "ios-status-shadow": {
+        "role": "neutral",
+        "displayName": "Phone Status Shadow",
+        "canonical": "rgba(0,0,0,0.6)",
+        "tonalRamp": ["oklch(10% 0 0)", "oklch(22% 0 0)", "oklch(34% 0 0)", "oklch(46% 0 0)", "oklch(58% 0 0)", "oklch(70% 0 0)", "oklch(82% 0 0)", "oklch(95% 0 0)"]
+      },
       "tone-cobalt": {
         "role": "tertiary",
         "displayName": "Cobalt",
@@ -155,18 +209,24 @@
       { "name": "window-rest", "value": "0 20px 50px rgba(30,28,22,.2), 0 2px 8px rgba(30,28,22,.1)", "purpose": "A background app window." },
       { "name": "window-active", "value": "0 28px 70px rgba(25,24,20,.28), 0 3px 10px rgba(25,24,20,.14)", "purpose": "The focused window." },
       { "name": "chrome", "value": "0 24px 60px rgba(30,28,22,.24), 0 2px 8px rgba(30,28,22,.12)", "purpose": "Menu panels, Controls, and notifications." },
-      { "name": "dock", "value": "0 14px 34px rgba(25,24,20,.22), inset 0 1px 0 rgba(255,255,255,.45)", "purpose": "The floating dock." }
+      { "name": "dock", "value": "0 14px 34px rgba(25,24,20,.22), inset 0 1px 0 rgba(255,255,255,.45)", "purpose": "The floating dock." },
+      { "name": "phone-widget", "value": "0 20px 45px rgba(0,0,0,.28)", "purpose": "The phone welcome widget over the artwork." },
+      { "name": "phone-dock", "value": "0 16px 34px rgba(0,0,0,.32)", "purpose": "The four-icon phone dock." },
+      { "name": "phone-sheet", "value": "0 -22px 60px rgba(0,0,0,.32)", "purpose": "The phone Controls sheet." }
     ],
     "motion": [
       { "name": "power-on", "value": "720ms cubic-bezier(.2,.8,.2,1)", "purpose": "The desktop wakes from dark to light on load." },
       { "name": "notification-in", "value": "420ms cubic-bezier(.2,.8,.2,1)", "purpose": "The welcome notification arrives." },
       { "name": "dock-lift", "value": "160ms cubic-bezier(.2,.8,.2,1)", "purpose": "The dock icon lifts and its neighbour follows." },
+      { "name": "sheet-in", "value": "320ms cubic-bezier(.2,.8,.2,1)", "purpose": "The phone Controls sheet rises from the bottom." },
       { "name": "reduced-motion", "value": "animation/transition: none", "purpose": "All motion freezes; the artwork stays still." }
     ],
     "breakpoints": [
       { "name": "laptop", "value": "1180px" },
       { "name": "compact", "value": "900px" },
-      { "name": "phone", "value": "560px" }
+      { "name": "phone", "value": "600px" },
+      { "name": "short-phone", "value": "max-height: 700px" },
+      { "name": "phone-landscape", "value": "max-height: 500px" }
     ]
   },
   "components": [
@@ -211,7 +271,30 @@
       "css": ".terminal-app{display:flex;height:100%;flex-direction:column;padding:12px 14px;background:#0b0f13;color:#e6edf3;font-family:ui-monospace,Consolas,monospace;font-size:12.5px;line-height:1.55;cursor:text}.term-prompt-inline{color:#7ee787;font-weight:600}.terminal-log{flex:1;min-height:0;overflow:auto}.terminal-input-line{display:flex;flex:0 0 auto;align-items:center;gap:8px;padding-top:5px}.terminal-input{min-width:0;flex:1;border:0;padding:0;background:transparent;color:#e6edf3;caret-color:#7ee787;font:inherit;outline:none}.terminal-input:focus-visible{outline:2px solid #7ee787;outline-offset:3px}"
     },
     {
+      "name": "Phone Home",
+      "kind": "navigation",
+      "refersTo": "dock",
+      "description": "The iOS-style phone home: a 44px status bar, welcome widget, four-column app grid, 44px Search pill, four-icon dock, and home indicator. The macOS shell is hidden.",
+      "html": "<section class='ios-shell'><div class='ios-statusbar'>…</div><div class='ios-home'><div class='ios-widget'>…</div><nav class='ios-app-grid'>…</nav><button class='ios-search-pill'>Search</button><nav class='ios-dock'>…</nav></div></section>",
+      "css": ".ios-shell{display:none;position:absolute;inset:0;flex-direction:column;overflow:hidden;background:#0a0612}.ios-statusbar{display:flex;min-height:calc(44px + env(safe-area-inset-top));align-items:center;justify-content:space-between;padding:env(safe-area-inset-top) 20px 0;color:#fff;font:600 13px/1 var(--os-ui)}.ios-widget{border-radius:24px;background:rgba(251,250,247,.94);box-shadow:0 20px 45px rgba(0,0,0,.28)}.ios-app-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px 8px}.ios-search-pill{min-height:44px;border:1px solid rgba(255,255,255,.18);border-radius:999px;background:rgba(18,16,26,.58);color:#fff}.ios-dock{border:1px solid rgba(255,255,255,.18);border-radius:26px;background:rgba(18,16,26,.58)}@media(max-width:600px),(max-height:500px) and (max-width:900px){.os-screen{display:none!important}.ios-shell{display:flex}}"
+    },
+    {
+      "name": "Phone App Bar",
+      "kind": "navigation",
+      "description": "A full-screen iOS app view: 44px status bar, 44px back/Home bar, and an opaque app surface. No traffic lights, no dragging.",
+      "html": "<section class='ios-app'><div class='ios-statusbar ios-statusbar--app'>…</div><header class='ios-navbar'><button class='ios-nav-back' aria-label='Back'>‹</button><h2>Work</h2><button class='ios-nav-home' aria-label='Home'>⌂</button></header><div class='ios-app-body'>…</div></section>",
+      "css": ".ios-app{display:flex;height:100%;min-height:0;flex-direction:column;overflow:hidden;background:var(--os-surface);color:var(--os-text)}.ios-navbar{display:flex;min-height:44px;align-items:center;gap:4px;padding:0 6px;border-bottom:1px solid var(--os-border);background:var(--os-surface)}.ios-navbar h2{flex:1;margin:0;font:600 17px/1.1 var(--os-ui);text-align:center}.ios-nav-back,.ios-nav-home{display:grid;width:44px;height:44px;place-items:center;border:0;border-radius:50%;background:transparent;color:var(--os-accent-text)}.ios-app-body{display:flex;min-height:0;flex:1;flex-direction:column;overflow:hidden;padding-bottom:18px}"
+    },
+    {
+      "name": "Phone Controls Sheet",
+      "kind": "dialog",
+      "description": "A bottom sheet with a grabber, Appearance, Brightness, Focus, and Reader. It blurs the home behind it, traps focus, and returns focus to its trigger.",
+      "html": "<section class='ios-sheet' role='dialog' aria-modal='true' aria-label='Controls'><span class='ios-sheet-grabber'></span><header class='ios-sheet-head'><h2>Controls</h2><button class='ios-sheet-close' aria-label='Close controls'>×</button></header>…</section>",
+      "css": ".ios-sheet{position:absolute;right:0;bottom:0;left:0;z-index:31;max-height:78%;overflow-y:auto;padding:10px 18px calc(22px + env(safe-area-inset-bottom));border-radius:24px 24px 0 0;background:var(--os-surface);box-shadow:0 -22px 60px rgba(0,0,0,.32);color:var(--os-text);animation:ios-sheet-in 320ms cubic-bezier(.2,.8,.2,1)}@keyframes ios-sheet-in{from{transform:translateY(100%)}}.ios-sheet-grabber{display:block;width:38px;height:5px;margin:0 auto 12px;border-radius:999px;background:var(--os-border-strong)}.ios-sheet-close{display:grid;width:44px;height:44px;place-items:center;border:0;border-radius:50%;background:var(--os-surface-2)}"
+    },
+    {
       "name": "Reader",
+
       "kind": "surface",
       "refersTo": "window",
       "description": "The flat, printable edition below the desktop: a 1000px window, 70ch reading column, every project, skill, and contact link. Prints white with the desktop hidden and project URLs appended.",
@@ -221,7 +304,7 @@
   ],
   "narrative": {
     "northStar": "The Portfolio Desktop",
-    "overview": "The portfolio is a working desktop, not a webpage dressed as a laptop. A visitor lands on a full-bleed Portfolio OS: the supplied violet ASCII-hands artwork on near-black, a translucent light menu bar, a dock, and a centered welcome window that names Bradley and puts the four live projects one click away. The two hands frame the welcome; the authored B lives in the chrome, not as a wallpaper glyph. There is no hardware frame; the screen is the page. The OS is the navigation and the proof. Work is a Finder-like project browser; Notes is About; Terminal is Skills; Mail is Contact; Web is the project page; About This Portfolio is the system card. Search, Apps, and Controls are original features with original names. The flat reader below the desktop is the accessible, no-JS, printable edition. The tone is calm, precise, and quietly playful: a real tool you can use, not a costume.",
+    "overview": "The portfolio is a working Portfolio OS, not a webpage dressed as a laptop. On larger screens a visitor lands on the supplied violet ASCII-hands artwork on near-black, a translucent light menu bar, a dock, and a centered welcome window that names Bradley and puts the four live projects one click away. On a phone the same artwork becomes an iOS-style pocket home: a status bar, welcome widget, four-column app grid, Search pill, four-icon dock, full-screen app views, and a Controls sheet. There is no hardware frame; the screen is the page. The OS is the navigation and the proof. Work is a project browser; Notes is About; Terminal is Skills; Mail is Contact; Web is the project page; About This Portfolio is the system card. Search, Apps, and Controls are original features with original names. The flat reader below is the accessible, no-JS, printable edition. The tone is calm, precise, and quietly playful: a real tool you can use, not a costume.",
     "keyCharacteristics": [
       "The user-supplied violet ASCII-hands artwork on near-black, full-bleed and fixed.",
       "Light windows by default; dark mode restages the windows, menu bar, dock, and tone colors while the artwork stays fixed.",
@@ -229,7 +312,9 @@
       "White/graphite windows with red/yellow/green traffic lights; 11px corners; opaque content panes.",
       "Translucent chrome only: menu bar, dock, Controls, notifications.",
       "System UI type in the windows; one true-black Terminal in monospace.",
-      "Every interaction a visitor can see actually works: windows drag, apps open, Search finds, Terminal answers, contact links resolve.",
+      "Every interaction a visitor can see actually works: windows drag on larger screens, apps open, Search finds, Terminal answers, contact links resolve.",
+      "On phones, an iOS-style home screen with a welcome widget, app grid, dock, full-screen apps, Search sheet, and Controls sheet — not a shrunken desktop.",
+      "Tablets and larger screens keep the macOS-style desktop; phone landscape uses a two-column pocket home.",
       "Original naming and icons. No Apple logos, feature names, or product names."
     ],
     "rules": [
@@ -237,7 +322,9 @@
       { "name": "The One Black Room Rule", "body": "The Terminal is the one true-black app surface. The artwork is a near-black ground, not a UI surface; every app surface is white, graphite, or a project tone.", "section": "colors" },
       { "name": "The Chrome-Only Blur Rule", "body": "Backdrop blur belongs to the menu bar, dock, Controls, and notifications. Content windows and the reader stay opaque.", "section": "elevation" },
       { "name": "The Authored B Rule", "body": "The B is an SVG path (B_PATH), never a font glyph. It appears in the welcome, menu bar, app icon, README file, favicon, and sleep screen, never as a watermark over the artwork.", "section": "shapes" },
-      { "name": "The No-Apple-Names Rule", "body": "The features are Search, Apps, and Controls. No Apple logos, product names, feature names, or SF fonts.", "section": "colors" },
+      { "name": "The No-Apple-Names Rule", "body": "The features are Search, Apps, and Controls. No Apple logos, product names, feature names, Safari naming, or SF fonts.", "section": "colors" },
+      { "name": "The Device Split Rule", "body": "Larger screens get the macOS-style desktop; phones get the iOS-style home and app views. Never shrink the desktop into a phone.", "section": "layout" },
+      { "name": "The Pocket Touch Rule", "body": "Phone controls are at least 44px; the grid, dock, status bar, nav, sheets, and Search are designed for thumbs and touch, with no hover-only route.", "section": "components" },
       { "name": "The Native Voice Rule", "body": "Use the system UI face for the OS and the system mono face for the Terminal. No display webfont, no brand typeface, no second sans.", "section": "typography" },
       { "name": "The No-Eyebrow Rule", "body": "A project's type sits beside or below its name, never as a kicker above it.", "section": "typography" },
       { "name": "The Layer Rule", "body": "A shadow describes a window above the desktop. If it reads as a glow, remove it.", "section": "elevation" },
@@ -246,15 +333,18 @@
     "dos": [
       "Do keep the supplied violet artwork full-bleed and fixed, with the welcome centered in the hands' gap.",
       "Do keep the authored B path everywhere the mark appears.",
-      "Do keep the menu bar, dock, and windows working: drag, minimize, zoom, close, open, search, type.",
-      "Do keep the three ways into contact: Mail, the welcome's Say Hello, and the reader.",
+      "Do keep the desktop's menu bar, dock, and windows working: drag, minimize, zoom, close, open, search, type.",
+      "Do keep the phone home native: iOS-style status bar, welcome widget, app grid, Search pill, dock, full-screen apps, and Controls sheet.",
+      "Do keep the three ways into contact: Mail, the welcome or widget Say Hello, and the reader.",
       "Do keep the original names Search, Apps, and Controls; never reintroduce Apple feature names.",
-      "Do keep the 24px minimum targets, 2px focus rings, keyboard routes, reduced-motion freeze, and no-JS reader.",
+      "Do keep the 44px phone targets, 24px desktop targets, 2px focus rings, keyboard routes, reduced-motion freeze, and no-JS reader.",
+      "Do keep the phone landscape and 320px layouts; the app grid and widget must remain reachable.",
       "Do keep the dark mode a full restaging, not an inversion.",
       "Do keep the print stylesheet: white reader, desktop hidden, project URLs visible."
     ],
     "donts": [
       "Don't add laptop hardware, a notch, a keyboard deck, or a desk scene; the screen is the page.",
+      "Don't shrink the macOS desktop into a phone or put macOS traffic lights on the iOS app bar.",
       "Don't reintroduce the generated B wallpaper, contour rings, or pointer parallax.",
       "Don't put content in glass cards, neon gradients, or a hero-and-cards layout.",
       "Don't use pure black outside the Terminal or pure white as a page ground.",
@@ -262,7 +352,7 @@
       "Don't put a kicker above a heading.",
       "Don't make dragging, hover, or a pointer the only route to any action.",
       "Don't invent clients, metrics, testimonials, a CV, or a live AI.",
-      "Don't use Apple logos, Apple feature names, or SF fonts."
+      "Don't use Apple logos, Apple feature names, Safari naming, or SF fonts."
     ]
   }
 }

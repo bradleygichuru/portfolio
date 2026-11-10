@@ -31,7 +31,7 @@ export const SITE = {
   role: "Full-stack developer",
   title: "Bradley Gichuru — Portfolio OS",
   description:
-    "An interactive desktop portfolio for Bradley Gichuru, a full-stack developer building web and mobile products. Open Work, read About, try the Terminal, or say hello.",
+    "An interactive Portfolio OS for Bradley Gichuru, a full-stack developer building web and mobile products: a macOS-style desktop on larger screens and an iOS-style home screen on phones. Open Work, read About, try the Terminal, or say hello.",
   email: "bradleygichuru@gmail.com",
   phone: "+254 768 085 236",
   phoneHref: "tel:+254768085236",

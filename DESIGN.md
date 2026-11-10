@@ -1,6 +1,6 @@
 ---
 name: "Bradley Gichuru — Portfolio OS"
-description: "A full-bleed desktop portfolio on the supplied violet ASCII-hands artwork: a working Portfolio OS with light windows, a translucent dock, and a black Terminal."
+description: "A full-bleed Portfolio OS on the supplied violet ASCII-hands artwork: a macOS-inspired desktop on larger screens and an iOS-inspired home screen on phones, with light windows, a translucent dock, and a black Terminal."
 colors:
   ivory: "#f7f1e6"
   sand: "#e7dfcf"
@@ -63,6 +63,15 @@ colors:
   white-28: "rgba(255,255,255,0.28)"
   white-14: "rgba(255,255,255,0.14)"
   white-10: "rgba(255,255,255,0.1)"
+  ios-glass: "rgba(18,16,26,0.58)"
+  ios-glass-border: "rgba(255,255,255,0.18)"
+  ios-scrim: "rgba(6,4,10,0.55)"
+  ios-label-shadow: "rgba(0,0,0,0.65)"
+  ios-status-shadow: "rgba(0,0,0,0.6)"
+  ios-widget-shadow: "rgba(0,0,0,0.28)"
+  ios-dock-shadow: "rgba(0,0,0,0.32)"
+  ios-sheet-shadow: "rgba(0,0,0,0.32)"
+  ios-icon-shadow: "rgba(0,0,0,0.35)"
 typography:
   app-body:
     fontFamily: "system-ui, sans-serif"
@@ -169,6 +178,10 @@ rounded:
   overlay: "13px"
   dock: "18px"
   dock-compact: "15px"
+  ios-widget: "24px"
+  ios-dock: "26px"
+  pill: "999px"
+  hairline: "1px"
   sheet: "10px"
   menu: "8px"
   panel: "9px"
@@ -228,7 +241,9 @@ components:
 
 The portfolio is a working desktop, not a webpage dressed as a laptop. A visitor lands on a full-bleed Portfolio OS: the supplied violet ASCII-hands artwork on near-black, a translucent light menu bar, a dock, and a centered welcome window that names Bradley and puts the four live projects one click away. The two hands frame the welcome; the authored **B** lives in the chrome, not as a wallpaper glyph. There is no hardware frame; the screen is the page.
 
-The OS is the navigation and the proof. Work is a Finder-like project browser; Notes is About; Terminal is Skills; Mail is Contact; Web is the project page; About This Portfolio is the system card. Search, Apps, and Controls are original features with original names. The flat reader below the desktop is the accessible, no-JS, printable edition. The tone is calm, precise, and quietly playful: a real tool you can use, not a costume.
+The OS is the navigation and the proof. Work is a project browser; Notes is About; Terminal is Skills; Mail is Contact; Web is the project page; About This Portfolio is the system card. Search, Apps, and Controls are original features with original names. The flat reader below the desktop is the accessible, no-JS, printable edition. The tone is calm, precise, and quietly playful: a real tool you can use, not a costume.
+
+On a phone, the desktop becomes a **pocket home**: an iOS-style status bar, a welcome widget, a four-column app grid, a Search pill, a four-icon dock, and full-screen app views with back and Home navigation. The same artwork, real content, and system blue carry through; the desktop chrome does not. The phone reader is a full-width document with a sticky bar.
 
 **Key Characteristics:**
 - The user-supplied violet ASCII-hands artwork on near-black, full-bleed and fixed.
@@ -237,7 +252,9 @@ The OS is the navigation and the proof. Work is a Finder-like project browser; N
 - White/graphite windows with red/yellow/green traffic lights; 11px corners; opaque content panes.
 - Translucent chrome only: menu bar, dock, Controls, notifications.
 - System UI type in the windows; one true-black Terminal in monospace.
-- Every interaction a visitor can see actually works: windows drag, apps open, Search finds, Terminal answers, contact links resolve.
+- Every interaction a visitor can see actually works: windows drag on larger screens, apps open, Search finds, Terminal answers, contact links resolve.
+- On phones, an iOS-style home screen with a welcome widget, app grid, dock, full-screen apps, Search sheet, and Controls sheet — not a shrunken desktop.
+- Tablets and larger screens keep the macOS-style desktop; phone landscape uses a two-column pocket home.
 - Original naming and icons. No Apple logos, feature names, or product names.
 
 ## Colors
@@ -265,17 +282,23 @@ The palette is a staged room: the supplied violet artwork on near-black is the g
 - **Ivory** (`ivory`, `#f7f1e6`) and **Sand** (`sand`, `#e7dfcf`): the reader's paper field, no longer the desktop ground.
 - **Terminal Black** (`terminal`, `#0b0f13`): the one true-black app surface.
 - **Dark window** (`dark-window`, `dark-window-2`): the dark-mode app surfaces.
+- **Phone glass** (`ios-glass`, `ios-glass-border`): the iOS dock, Search pill, and widget transparency over the artwork.
+- **Phone scrim** (`ios-scrim`): the blurred backdrop behind the iOS Controls sheet and full-screen Search.
 
 ### Named Rules
 **The Lit Desktop Rule.** Start with light windows. Dark mode restages the windows, chrome, and tone colors; the supplied artwork is the fixed ground in both modes.
 
 **The One Black Room Rule.** The Terminal is the one true-black app surface. The artwork is a near-black ground, not a UI surface; every app surface is white, graphite, or a project tone.
 
-**The Chrome-Only Blur Rule.** Backdrop blur belongs to the menu bar, dock, Controls, and notifications. Content windows and the reader stay opaque.
+**The Chrome-Only Blur Rule.** Backdrop blur belongs to desktop chrome (menu bar, dock, Controls, notifications) and the phone home's widget, dock, Search pill, and sheets. Content app surfaces and the reader stay opaque.
 
 **The Authored B Rule.** The B is an SVG path (`B_PATH`), never a font glyph. It appears in the welcome, menu bar, app icon, README file, favicon, and sleep screen — never over the artwork as a watermark. It is a geometric mark; the early "serif B" descriptor was retired at finish.
 
 **The No-Apple-Names Rule.** The features are **Search**, **Apps**, and **Controls**. No Apple logos, product names, feature names, or SF fonts.
+
+**The Device Split Rule.** Larger screens get the macOS-style desktop; phones get the iOS-style home and app views. Never shrink the desktop into a phone.
+
+**The Pocket Touch Rule.** Phone controls are at least 44px; the grid, dock, status bar, nav, sheets, and Search are all designed for thumbs and touch, with no hover-only route.
 
 ## Typography
 
@@ -291,6 +314,7 @@ The palette is a staged room: the supplied violet artwork on near-black is the g
 - **Reader title** (700, `clamp(30px, 4vw, 44px)`, 1, −0.035em): the flat edition's name.
 - **App body** (400, 13px, 1.55): window copy, descriptions, and notes.
 - **Label** (600, 10px, 0.08em, uppercase): sidebar labels, preview types, metadata, and project kinds.
+- **Phone title** (600–700, 17–24px, 1.1): iOS app-bar titles and the phone widget name.
 - **Mono** (400, 12.5px, 1.55): all Terminal output and input.
 
 ### Named Rules
@@ -306,27 +330,32 @@ The desktop is exactly one viewport tall (`100svh`, min 560px) and full-bleed. T
 
 The Work window is a three-column browser: 178px sidebar, fluid project grid, 236px preview. Notes is a 168px sidebar plus a 62ch note. Mail is 154px / 214px / fluid. The reader below is a 1000px window with a 70ch reading column.
 
-At **900px** the desktop becomes a phone/tablet stack: one full-screen window at a time, the dock at the bottom, the notification hidden, and the welcome as a floating card (16px inset, 620px max height). Between 561px and 900px the welcome is capped at 680×560 and centered. At **560px** the welcome turns one-column, the project grid becomes rows, mail actions stack, and the reader becomes one column. At **1180px** the Work and Mail side columns narrow and desktop icons hide.
+At **900px** the macOS desktop becomes a compact stack for tablets: one full-screen window at a time, the dock at the bottom, the notification hidden, and the welcome as a floating 590px-wide card with auto height. At **1180px** the Work and Mail side columns narrow and desktop icons hide.
 
-The reader is the flat edition: every project, skill, and contact detail in semantic order. It prints on white with the desktop hidden, project URLs appended, and the footer link removed.
+At **600px** and below — or a phone-height landscape (≤500px high and ≤900px wide) — the macOS shell is replaced by the iOS shell: a 44px status bar (plus safe area), welcome widget, four-column app grid, 44px Search pill, four-icon dock, and home indicator. App views use a 44px status bar, a 44px back/Home bar, and a full-height content pane. At **390×844** all seven home apps and the dock fit; at **320×568** the widget drops its lede and the app grid scrolls behind a soft fade; in phone landscape the widget and app grid sit in two columns. Inside iOS app frames, project rows and mail actions stack at 560px; the reader becomes a full-width document.
+
+The reader is the flat edition: every project, skill, and contact detail in semantic order. On a phone it is a full-width document with a sticky 44px bar and **Back to home**; on larger screens it is a 1000px window with **Back to desktop**. It prints on white with the OS hidden, project URLs appended, and the footer link removed.
 
 ## Elevation & Depth
 
 Depth is window layering, not glass. Content windows are opaque and float on two shadows: a wide ambient shadow and a tight contact shadow. The active window gets a stronger pair. The dock and menu panels get a deeper chrome shadow. The artwork has no card, frame, or border; a soft top/bottom shade protects the chrome without veiling the hands.
 
-The menu bar and dock use a saturated backdrop blur because they sit over the artwork; that translucency is chrome, not content. The welcome, Work, Notes, Terminal, Mail, Web, About, and reader are fully opaque.
+The menu bar and dock use a saturated backdrop blur because they sit over the artwork; that translucency is chrome, not content. The phone widget, dock, Search pill, and sheets use the same logic at 58% ink glass, while the iOS app surfaces and the reader remain opaque.
 
 ### Shadow Vocabulary
 - **Window at rest** (`0 20px 50px rgba(30,28,22,.2), 0 2px 8px rgba(30,28,22,.1)`): a background app window.
 - **Window active** (`0 28px 70px rgba(25,24,20,.28), 0 3px 10px rgba(25,24,20,.14)`): the focused window.
 - **Chrome** (`0 24px 60px rgba(30,28,22,.24), 0 2px 8px rgba(30,28,22,.12)`): menu panels, Controls, and notifications.
 - **Dock** (`0 14px 34px rgba(25,24,20,.22), inset 0 1px 0 rgba(255,255,255,.45)`): the floating dock.
+- **Phone widget** (`0 20px 45px rgba(0,0,0,.28)`): the home widget over the artwork.
+- **Phone dock** (`0 16px 34px rgba(0,0,0,.32)`): the four-icon iOS dock.
+- **Phone sheet** (`0 -22px 60px rgba(0,0,0,.32)`): the Controls sheet lifting from the bottom.
 
 **The Layer Rule.** A shadow describes a window above the desktop. If it reads as a glow, remove it.
 
 ## Shapes
 
-Windows are 11px rounded rectangles with a 38px title bar and three 12px traffic-light circles inside 24px hit targets. Cards, buttons, and fields use 6px; menus and Search results use 8px; the dock uses 18px; overlays use 13px; app icons are 14px rounded squares drawn as SVG. The only perfect circles are the traffic lights, the app-icon envelope dome, and the Search/Wi-Fi status glyphs.
+Windows are 11px rounded rectangles with a 38px title bar and three 12px traffic-light circles inside 24px hit targets. Cards, buttons, and fields use 6px; menus and Search results use 8px; the dock uses 18px; overlays use 13px; app icons are 14px rounded squares drawn as SVG. The phone home uses a 24px widget and 26px dock; the Search pill and home indicator are 999px capsules; the Controls sheet lifts on 24px top corners. The only perfect circles are the desktop traffic lights, the app-icon envelope dome, and the Search/Wi-Fi status glyphs.
 
 The B is the one bespoke shape: a heavy, slightly squared geometric B with two counters, drawn as a single even-odd path. It is the brand, the favicon, the welcome mark, the menu-bar mark, and the sleep mark. It is never replaced by a system character and never watermarked over the artwork.
 
@@ -347,7 +376,7 @@ A floating translucent bar with Work, Notes, Terminal, Mail, Web, Apps, and Tras
 The first window, centered in the gap between the hands. A 64px authored B, the name, role, one-line thesis, **Open Work / Read About / Say Hello**, the four real projects as recent-work buttons, and a tip. On compact, the recent-work row is hidden, the tip switches to touch guidance, and the card fits its content so the artwork remains visible above and below. In no-JS, the actions and recent work are hidden and a banner points to the reader.
 
 ### Work
-A Finder-like browser: back/forward, search, grid/list toggle, Favourites and Projects sidebar, project tiles, and a preview pane with **Open project** and **Visit live site**. One tap opens a project on compact; double-click opens it on desktop. The search filters name, type, and description with a named empty state.
+A project browser: back/forward, search, grid/list toggle, Favourites and Projects sidebar, project tiles, and a preview pane with **Open project** and **Visit live site**. One tap opens a project on compact; double-click opens it on desktop. The search filters name, type, and description with a named empty state.
 
 ### Notes
 A two-pane About: a Notes sidebar (About Bradley, Work, Terminal, Mail) and a 62ch note with the bio, vitals, and **Say hello**.
@@ -359,7 +388,7 @@ The one true-black room. A local command interface with prompt history (↑/↓)
 A three-pane contact app: mailboxes, a single "Let's build something" invitation, and a reading pane with Phone, GitHub, LinkedIn, **Reply**, and **Copy email** with copied/error feedback. The email address is present in the message header and in Copy email; the duplicate primary was removed.
 
 ### Web
-A Safari-style browser frame with a URL field and a live-site button. A project page shows the name, type below the name, description, **Visit live project**, **Back to Work**, and the other three projects. The start page lists all four.
+A browser-style frame with a URL field and a live-site button. A project page shows the name, type below the name, description, **Visit live project**, **Back to Work**, and the other three projects. The start page lists all four.
 
 ### About This Portfolio
 The system card: the B app icon, name, role, Portfolio OS 1.0, project count, toolkit, email, **Read About**, and **Say hello**.
@@ -376,23 +405,38 @@ Appearance (Light/Dark), brightness, Wi-Fi, Bluetooth, Focus, and battery. Appea
 ### Notification
 A welcome notification with **Open Work** and dismiss. It auto-dismisses after 10 seconds and is hidden on compact.
 
+### Phone Home
+The iOS surface for phones. A status bar with the real time, signal, Wi-Fi, battery, and a Controls trigger; a welcome widget with the B, name, role, thesis, **Open Work / Read About / Say Hello**, and a Controls button; a four-column app grid (Work, Notes, Terminal, Mail, Web, About, README); a Search pill; a four-icon dock (Work, Notes, Terminal, Mail); and a home indicator. At 320px the widget compacts and the grid scrolls; in landscape the widget and grid become two columns.
+
+### Phone Apps
+Apps open full-screen with a 44px status bar, a 44px back/Home bar, and the same app content as the desktop. Work hides its sidebar and preview and opens a project on one tap; Notes, Mail, and Web become single-column; Terminal stays the one dark room; About becomes a system card. The phone app bar never shows traffic lights or a draggable window.
+
+### Phone Search
+A full-screen search sheet with a 17px field, Cancel, the same app/project/skill/contact index, 52px result rows, arrow-key selection, and focus returning to the Search pill. It is the mobile expression of the desktop Search.
+
+### Phone Controls
+A bottom sheet with a grabber, Appearance, Brightness, Focus, and Reader. It dims and blurs the home behind it, traps focus, closes on Escape or the scrim, and returns focus to the status-bar or widget trigger.
+
 ### Reader
-The flat edition below the desktop: About, Work, Skills, Contact, project URLs, real links, and a print stylesheet. It is the screen-reader and no-JS edition, and it prints clean.
+The flat edition below the OS: About, Work, Skills, Contact, project URLs, real links, and a print stylesheet. On a phone it is a full-width document with a sticky 44px bar and **Back to home**; on larger screens it is the 1000px window. It is the screen-reader and no-JS edition, and it prints clean.
 
 ## Do's and Don'ts
 
 ### Do:
 - **Do** keep the supplied violet artwork full-bleed and fixed, with the welcome centered in the hands' gap.
 - **Do** keep the authored B path everywhere the mark appears.
-- **Do** keep the menu bar, dock, and windows working: drag, minimize, zoom, close, open, search, type.
-- **Do** keep the three ways into contact: Mail, the welcome's Say Hello, and the reader.
+- **Do** keep the desktop's menu bar, dock, and windows working: drag, minimize, zoom, close, open, search, type.
+- **Do** keep the phone home native: iOS-style status bar, welcome widget, app grid, Search pill, dock, full-screen apps, and Controls sheet.
+- **Do** keep the three ways into contact: Mail, the welcome or widget Say Hello, and the reader.
 - **Do** keep the original names Search, Apps, and Controls; never reintroduce Apple feature names.
-- **Do** keep the 24px minimum targets, 2px focus rings, keyboard routes, reduced-motion freeze, and no-JS reader.
+- **Do** keep the 44px phone targets, 24px desktop targets, 2px focus rings, keyboard routes, reduced-motion freeze, and no-JS reader.
+- **Do** keep the phone landscape and 320px layouts; the app grid and widget must remain reachable.
 - **Do** keep the dark mode a full restaging, not an inversion.
 - **Do** keep the print stylesheet: white reader, desktop hidden, project URLs visible.
 
 ### Don't:
 - **Don't** add laptop hardware, a notch, a keyboard deck, or a desk scene; the screen is the page.
+- **Don't** shrink the macOS desktop into a phone or put macOS traffic lights on the iOS app bar.
 - **Don't** reintroduce the generated B wallpaper, contour rings, or pointer parallax.
 - **Don't** put content in glass cards, neon gradients, or a hero-and-cards layout.
 - **Don't** use pure black outside the Terminal or pure white as a page ground.
@@ -400,7 +444,7 @@ The flat edition below the desktop: About, Work, Skills, Contact, project URLs, 
 - **Don't** put a kicker above a heading.
 - **Don't** make dragging, hover, or a pointer the only route to any action.
 - **Don't** invent clients, metrics, testimonials, a CV, or a live AI.
-- **Don't** use Apple logos, Apple feature names, or SF fonts.
+- **Don't** use Apple logos, Apple feature names, Safari naming, or SF fonts.
 
 ## Provenance
 
