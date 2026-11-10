@@ -2,6 +2,9 @@
 dist/
 .output/
 
+# local Impeccable review captures
+.impeccable/review/
+
 # dependencies
 node_modules/
 

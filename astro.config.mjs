@@ -9,4 +9,7 @@ export default defineConfig({
   integrations: [tailwind(), react()],
   site: "https://bradleygichuru.github.io",
   base: "/portfolio",
+  devToolbar: {
+    enabled: false,
+  },
 });

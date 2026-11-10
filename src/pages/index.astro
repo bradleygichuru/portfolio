@@ -1,241 +1,174 @@
 ---
-import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-  CardFooter,
-} from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Github, Linkedin, Mail, ExternalLink, ArrowRight, Phone } from "lucide-react";
-import "@/styles/globals.css";
 import Layout from "../layouts/Layout.astro";
+import PortfolioOS from "../components/os/PortfolioOS";
+import {
+  ABOUT_BODY,
+  CONTACT_CHANNELS,
+  PROJECTS,
+  SITE,
+  SKILL_GROUPS,
+  VITALS,
+} from "../data/portfolio";
+import {
+  ArrowUp,
+  ArrowUpRight,
+  Github,
+  Linkedin,
+  Mail,
+  Phone,
+  type LucideIcon,
+} from "lucide-react";
 
-const skills = [
-  "React", "TypeScript", "Vue", "Tailwind CSS",
-  "Flutter", "React Native",
-  "Node.js", "Python", "Go", "GraphQL",
-  "Docker", "AWS", "Linux",
-  "PostgreSQL", "MySQL", "MongoDB",
-];
+const year = new Date().getFullYear();
+const [emailLocal, emailDomain] = SITE.email.split("@") as [string, string];
 
-const featuredProjects = [
-  {
-    title: "Newwell",
-    description: "Music Aggregation and Artist Music Analytics platform",
-    link: "https://web.newwell.app/",
-    featured: true,
-    gradient: "from-emerald-500 to-teal-600",
-  },
-  {
-    title: "Hizitickets",
-    description: "Event Ticket Vending Systems - A modern ticketing platform for events and venues",
-    link: "https://hizitickets.com",
-    featured: true,
-    gradient: "from-violet-500 to-purple-600",
-  },
-  {
-    title: "Towing Guru",
-    description: "A price estimator for a small towing company based in the US",
-    link: "https://towingguru.net/",
-    featured: true,
-    gradient: "from-amber-500 to-orange-600",
-  },
-];
-
-const otherProjects = [
-  {
-    title: "Budgetlite",
-    description: "An expense tracker and budgeting app tailored for the East African market",
-    link: "https://budgetlite-nextjs.vercel.app/",
-  },
-];
-
-const socials = [
-  { icon: Phone, label: "Phone", href: "tel:+254768085236", text: "+254 768 085 236", color: "text-blue-500" },
-  { icon: Mail, label: "Email", href: "mailto:bradleygichuru@gmail.com", text: "bradleygichuru@gmail.com", color: "text-red-500" },
-  { icon: Github, label: "GitHub", href: "https://github.com/bradleygichuru", text: "github.com/bradleygichuru", color: "text-gray-600 dark:text-gray-400" },
-  { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/bradley-kabecha-830678235/", text: "linkedin.com/in/bradley-kabecha", color: "text-blue-700" },
-];
+const ICONS: Record<string, LucideIcon> = {
+  mail: Mail,
+  phone: Phone,
+  github: Github,
+  linkedin: Linkedin,
+};
 ---
 
-<Layout title="Bradley Gichuru | Full Stack Developer" description="Full Stack Developer specializing in web and mobile development">
-  <div class="min-h-screen bg-background text-foreground">
-    <!-- Skip to main content for accessibility -->
-    <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-primary focus:text-primary-foreground rounded-md">
-      Skip to main content
-    </a>
+<Layout title={SITE.title} description={SITE.description}>
+  <noscript>
+    <style is:inline>
+      .os-menubar,
+      .os-dock,
+      .os-titlebar,
+      .desktop-icons,
+      .os-notification,
+      .welcome-actions,
+      .welcome-recent,
+      .welcome-tip {
+        display: none !important;
+      }
+      .welcome-app {
+        justify-content: center;
+      }
+      .os-window[data-app="welcome"] {
+        height: auto !important;
+        min-height: 0 !important;
+      }
+    </style>
+    <p class="noscript-banner">
+      JavaScript is off — this desktop is static. The README below has every
+      project, skill, and contact detail.
+    </p>
+  </noscript>
 
-    <!-- Hero Section -->
-    <section id="main" class="relative py-20 md:py-32 overflow-hidden">
-      <!-- Background decoration -->
-      <div class="absolute inset-0 -z-10">
-        <div class="absolute top-20 left-1/4 w-64 h-64 bg-violet-500/20 rounded-full blur-3xl"></div>
-        <div class="absolute bottom-20 right-1/4 w-48 h-48 bg-emerald-500/15 rounded-full blur-3xl"></div>
+  <PortfolioOS client:load />
+
+  <section id="reader" class="reader" aria-labelledby="reader-title">
+    <div class="reader-window">
+      <div class="reader-bar">
+        <span class="reader-lights" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </span>
+        <span class="reader-title">README.md — Editor</span>
+        <a class="reader-back" href="#desktop">Back to desktop</a>
       </div>
 
-      <div class="container mx-auto px-4 max-w-2xl">
-        <div class="text-center max-w-2xl mx-auto">
-          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4 font-[var(--font-heading)]">
-            Bradley Gichuru
-          </h1>
-          <p class="text-lg md:text-xl text-muted-foreground mb-8">
-            Full Stack Developer
-          </p>
-          <p class="text-muted-foreground max-w-md mx-auto leading-relaxed">
-            Building web and mobile experiences with modern technologies.
-            Passionate about creating products that matter.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- About -->
-    <section class="py-16">
-      <div class="container mx-auto px-4 max-w-5xl">
-        <Card class="max-w-2xl mx-auto">
-          <CardHeader>
-            <CardTitle class="text-xl">About Me</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <p class="text-muted-foreground leading-relaxed">
-              I'm Bradley Kabecha, a full-stack developer specializing in web development.
-              I build products that solve real problems, from music analytics platforms
-              to event ticketing systems. Since technology is still in an evolving state,
-              I'm always receptive to change and willing to learn more as it evolves.
-            </p>
-          </CardContent>
-        </Card>
-      </div>
-    </section>
-
-    <!-- Featured Projects -->
-    <section class="py-16">
-      <div class="container mx-auto px-4 max-w-5xl">
-        <div class="flex items-center gap-2 mb-8">
-          <h2 class="text-2xl font-semibold font-[var(--font-heading)]">Featured Work</h2>
-          <span class="w-8 h-0.5 bg-gradient-to-r from-violet-500 to-emerald-500 rounded-full"></span>
-        </div>
-
-        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {featuredProjects.map((project) => (
-            <a
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              class="group relative block"
-            >
-              <div class={`absolute inset-0 rounded-2xl bg-gradient-to-br ${project.gradient} opacity-10 group-hover:opacity-20 transition-opacity duration-300`}></div>
-              <Card class="relative overflow-hidden border-border/50 dark:border-border/30 hover:border-violet-500/50 hover:shadow-lg hover:shadow-violet-500/10 transition-all duration-300">
-                <CardHeader>
-                  <div class="flex items-center justify-between">
-                    <CardTitle class="text-xl group-hover:text-violet-500 transition-colors">
-                      {project.title}
-                    </CardTitle>
-                    <ExternalLink class="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
-                  </div>
-                  <CardDescription>{project.description}</CardDescription>
-                </CardHeader>
-                <CardFooter>
-                  <span class="text-sm text-muted-foreground flex items-center gap-1 group-hover:text-violet-500 transition-colors">
-                    View Project <ArrowRight class="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </span>
-                </CardFooter>
-              </Card>
-            </a>
-          ))}
-        </div>
-      </div>
-    </section>
-
-    <!-- Skills -->
-    <section class="py-16 bg-gradient-to-b from-muted/20 to-transparent dark:from-muted/5 dark:to-transparent">
-      <div class="container mx-auto px-4 max-w-5xl">
-        <h2 class="text-2xl font-semibold mb-8 font-[var(--font-heading)]">Skills & Technologies</h2>
-
-        <div class="flex flex-wrap gap-2">
-          {skills.map((skill) => (
-            <Badge
-              variant="secondary"
-              class="hover:bg-violet-500/10 hover:text-violet-600 dark:hover:text-violet-400 hover:border-violet-500/50 transition-all duration-200 cursor-default"
-            >
-              {skill}
-            </Badge>
-          ))}
-        </div>
-      </div>
-    </section>
-
-    <!-- Other Projects -->
-    <section class="py-16">
-      <div class="container mx-auto px-4 max-w-5xl">
-        <h2 class="text-2xl font-semibold mb-8 font-[var(--font-heading)]">Other Projects</h2>
-
-        <div class="grid gap-6 md:grid-cols-2">
-          {otherProjects.map((project) => (
-            <a
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              class="group"
-            >
-              <Card class="h-full hover:border-violet-500/50 dark:hover:border-violet-500/30 transition-all duration-300">
-                <CardHeader>
-                  <CardTitle class="text-lg group-hover:text-violet-500 transition-colors">
-                    {project.title}
-                  </CardTitle>
-                  <CardDescription>{project.description}</CardDescription>
-                </CardHeader>
-                <CardFooter>
-                  <Button variant="ghost" size="sm" class="group-hover:translate-x-1 transition-transform">
-                    View <ExternalLink class="w-4 h-4 ml-1" />
-                  </Button>
-                </CardFooter>
-              </Card>
-            </a>
-          ))}
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section class="py-16 bg-gradient-to-b from-transparent to-muted/20 dark:to-muted/5">
-      <div class="container mx-auto px-4 max-w-5xl">
-        <Card class="max-w-md mx-auto">
-          <CardHeader>
-            <CardTitle class="text-xl text-center">Get In Touch</CardTitle>
-            <CardDescription class="text-center">
-              Interested in working together or just want to say hi?
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            <div class="space-y-4">
-              {socials.map((social) => (
-                <a
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="flex items-center gap-3 p-3 rounded-lg hover:bg-muted dark:hover:bg-muted/50 transition-colors group"
-                >
-                  <social.icon class={`w-5 h-5 ${social.color} group-hover:scale-110 transition-transform` } />
-                  <span class="text-sm font-medium">{social.text}</span>
-                </a>
-              ))}
-            </div>
-          </CardContent>
-        </Card>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="py-8 border-t border-gradient-to-r from-transparent via-violet-500/30 to-transparent">
-      <div class="container mx-auto px-4 max-w-5xl text-center">
-        <p class="text-sm text-muted-foreground">
-          &copy; {new Date().getFullYear()} Bradley Gichuru. All rights reserved.
+      <div class="reader-body">
+        <h2 id="reader-title">{SITE.name}</h2>
+        <p class="reader-role">{SITE.role}</p>
+        <p class="reader-lede">
+          I build web and mobile products with modern technologies — and care
+          about the details that make them matter. This is the flat edition of
+          the desktop, with every project, skill, and contact link in one place.
         </p>
+
+        <section class="reader-section" aria-labelledby="reader-about">
+          <h3 id="reader-about">About</h3>
+          {ABOUT_BODY.map((paragraph) => <p>{paragraph}</p>)}
+          <dl class="reader-vitals">
+            {VITALS.map((vital) => (
+              <div>
+                <dt>{vital.label}</dt>
+                <dd>{vital.value}</dd>
+              </div>
+            ))}
+          </dl>
+        </section>
+
+        <section class="reader-section" aria-labelledby="reader-work">
+          <h3 id="reader-work">Work</h3>
+          <ul class="reader-projects">
+            {PROJECTS.map((project) => (
+              <li>
+                <div class="reader-project-head">
+                  <h4>{project.name}</h4>
+                  <a
+                    href={project.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Visit ${project.name}`}
+                  >
+                    Visit
+                    <ArrowUpRight size={12} aria-hidden="true" />
+                  </a>
+                </div>
+                <span class="reader-project-type">{project.type}</span>
+                <p>{project.description}</p>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        <section class="reader-section" aria-labelledby="reader-skills">
+          <h3 id="reader-skills">Skills</h3>
+          <div class="reader-skills">
+            {SKILL_GROUPS.map((group) => (
+              <div class="reader-skill-group">
+                <h4>{group.label}</h4>
+                <p>{group.items.join(" · ")}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section class="reader-section" aria-labelledby="reader-contact">
+          <h3 id="reader-contact">Contact</h3>
+          <div class="reader-contact">
+            <p>Interested in working together or just want to say hi?</p>
+            <a class="reader-email" href={`mailto:${SITE.email}`}>
+              {emailLocal}@<wbr />{emailDomain}
+            </a>
+            {CONTACT_CHANNELS.filter((channel) => channel.id !== "email").map(
+              (channel) => {
+                const Icon = ICONS[channel.icon];
+                return (
+                  <a
+                    class="reader-contact-row"
+                    href={channel.href}
+                    target={channel.external ? "_blank" : undefined}
+                    rel={channel.external ? "noopener noreferrer" : undefined}
+                  >
+                    <span>
+                      <Icon size={13} aria-hidden="true" /> {channel.label}
+                    </span>
+                    <span>{channel.value}</span>
+                  </a>
+                );
+              },
+            )}
+          </div>
+        </section>
+
+        <div class="reader-foot">
+          <span>End of README.md · {SITE.os}</span>
+          <a href="#desktop">
+            <ArrowUp size={12} aria-hidden="true" />
+            Back to desktop
+          </a>
+        </div>
       </div>
-    </footer>
-  </div>
+    </div>
+  </section>
+
+  <footer class="os-footer">
+    <span>© {year} Bradley Gichuru</span>
+    <span>Portfolio OS 1.0</span>
+    <span>Built with Astro + React</span>
+  </footer>
 </Layout>

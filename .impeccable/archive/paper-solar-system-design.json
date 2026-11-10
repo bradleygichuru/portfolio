@@ -1,0 +1,176 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-09T23:15:00Z",
+  "title": "Design System: Bradley Gichuru — Portfolio",
+  "extensions": {
+    "colorMeta": {
+      "paper": {
+        "role": "neutral",
+        "displayName": "Warm Stock",
+        "canonical": "#f3e9d2",
+        "tonalRamp": ["oklch(15% 0.02 85)", "oklch(25% 0.02 85)", "oklch(35% 0.02 85)", "oklch(45% 0.02 85)", "oklch(55% 0.02 85)", "oklch(70% 0.02 85)", "oklch(82% 0.02 85)", "oklch(95% 0.02 85)"]
+      },
+      "paper-light": {
+        "role": "neutral",
+        "displayName": "Stock Light",
+        "canonical": "#faf3e4",
+        "tonalRamp": ["oklch(15% 0.015 85)", "oklch(25% 0.015 85)", "oklch(35% 0.015 85)", "oklch(45% 0.015 85)", "oklch(55% 0.015 85)", "oklch(70% 0.015 85)", "oklch(85% 0.015 85)", "oklch(96% 0.015 85)"]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Prussian Ink",
+        "canonical": "#1b2a38",
+        "tonalRamp": ["oklch(15% 0.03 245)", "oklch(25% 0.03 245)", "oklch(35% 0.03 245)", "oklch(45% 0.03 245)", "oklch(55% 0.03 245)", "oklch(70% 0.03 245)", "oklch(82% 0.03 245)", "oklch(95% 0.03 245)"]
+      },
+      "ink-soft": {
+        "role": "neutral",
+        "displayName": "Soft Ink",
+        "canonical": "#4d5a66",
+        "tonalRamp": ["oklch(15% 0.025 245)", "oklch(25% 0.025 245)", "oklch(35% 0.025 245)", "oklch(45% 0.025 245)", "oklch(55% 0.025 245)", "oklch(70% 0.025 245)", "oklch(82% 0.025 245)", "oklch(95% 0.025 245)"]
+      },
+      "desk": {
+        "role": "neutral",
+        "displayName": "Deep Desk",
+        "canonical": "#10201d",
+        "tonalRamp": ["oklch(15% 0.035 165)", "oklch(25% 0.035 165)", "oklch(35% 0.035 165)", "oklch(45% 0.035 165)", "oklch(55% 0.035 165)", "oklch(70% 0.035 165)", "oklch(82% 0.035 165)", "oklch(95% 0.035 165)"]
+      },
+      "cream": {
+        "role": "neutral",
+        "displayName": "Cream",
+        "canonical": "#fbf5e6",
+        "tonalRamp": ["oklch(15% 0.03 85)", "oklch(25% 0.03 85)", "oklch(35% 0.03 85)", "oklch(45% 0.03 85)", "oklch(55% 0.03 85)", "oklch(70% 0.03 85)", "oklch(85% 0.03 85)", "oklch(96% 0.03 85)"]
+      },
+      "cobalt": {
+        "role": "secondary",
+        "displayName": "Cobalt",
+        "canonical": "#2456c7",
+        "tonalRamp": ["oklch(15% 0.18 265)", "oklch(25% 0.18 265)", "oklch(35% 0.18 265)", "oklch(45% 0.18 265)", "oklch(55% 0.18 265)", "oklch(70% 0.18 265)", "oklch(82% 0.18 265)", "oklch(95% 0.18 265)"]
+      },
+      "tomato": {
+        "role": "primary",
+        "displayName": "Tomato Ink",
+        "canonical": "#dd4f2a",
+        "tonalRamp": ["oklch(15% 0.16 35)", "oklch(25% 0.16 35)", "oklch(35% 0.16 35)", "oklch(45% 0.16 35)", "oklch(55% 0.16 35)", "oklch(70% 0.16 35)", "oklch(82% 0.16 35)", "oklch(95% 0.16 35)"]
+      },
+      "sunflower": {
+        "role": "tertiary",
+        "displayName": "Sunflower",
+        "canonical": "#f2b31a",
+        "tonalRamp": ["oklch(15% 0.16 80)", "oklch(25% 0.16 80)", "oklch(35% 0.16 80)", "oklch(45% 0.16 80)", "oklch(55% 0.16 80)", "oklch(70% 0.16 80)", "oklch(82% 0.16 80)", "oklch(95% 0.16 80)"]
+      },
+      "forest": {
+        "role": "tertiary",
+        "displayName": "Forest",
+        "canonical": "#2c6a4e",
+        "tonalRamp": ["oklch(15% 0.08 155)", "oklch(25% 0.08 155)", "oklch(35% 0.08 155)", "oklch(45% 0.08 155)", "oklch(55% 0.08 155)", "oklch(70% 0.08 155)", "oklch(82% 0.08 155)", "oklch(95% 0.08 155)"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "The masthead and the one-page thesis." },
+      "headline": { "displayName": "Headline", "purpose": "Dossier titles and the flat-guide title." },
+      "title": { "displayName": "Title", "purpose": "Flat-guide section headings." },
+      "body": { "displayName": "Body", "purpose": "Dossier and flat-guide reading copy, 62–68ch." },
+      "label": { "displayName": "Label", "purpose": "Contents, planet key, plate legend, metadata, pull tab." }
+    },
+    "shadows": [
+      { "name": "book-rest", "value": "0 30px 60px -18px rgba(0,0,0,.65), 0 60px 120px -40px rgba(0,0,0,.5)", "purpose": "The spread resting on the desk." },
+      { "name": "planet-layer", "value": "drop-shadow(0 10px 10px rgba(27,42,56,.2))", "purpose": "Die-cut discs and moons." },
+      { "name": "paper-tab", "value": "2px 2px 0 rgba(27,42,56,.12), 0 10px 20px rgba(0,0,0,.25)", "purpose": "The physical pull tab edge." },
+      { "name": "dossier", "value": "0 40px 80px -20px rgba(0,0,0,.7)", "purpose": "The fold-out lifted above the spread." }
+    ],
+    "motion": [
+      { "name": "book-settle", "value": "700ms cubic-bezier(.2,.8,.2,1)", "purpose": "The spread settles onto the desk on load." },
+      { "name": "sheet-in", "value": "450ms cubic-bezier(.2,.8,.2,1)", "purpose": "The dossier unfolds." },
+      { "name": "orbit", "value": "104s-248s linear infinite", "purpose": "The printed orbits; paused on hover and focus." },
+      { "name": "signal", "value": "2.4s ease-out infinite", "purpose": "The live signal dot." },
+      { "name": "hover-lift", "value": "250ms cubic-bezier(.2,.8,.2,1)", "purpose": "The planet lifts toward the visitor." }
+    ],
+    "breakpoints": [
+      { "name": "tablet", "value": "960px" },
+      { "name": "phone", "value": "640px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Pull Tab",
+      "kind": "button",
+      "refersTo": "pull-tab",
+      "description": "The physical paper tab that starts and pauses the orbit; vertical on desktop, compact and horizontal on tablet and phone.",
+      "html": "<button class='ds-pull-tab' aria-pressed='false'><span>Pull to orbit</span></button>",
+      "css": ".ds-pull-tab{position:relative;display:inline-flex;align-items:center;justify-content:center;width:150px;height:34px;padding:0 12px 0 26px;border:1px solid rgba(27,42,56,.35);background:var(--paper-light);color:var(--ink);font:500 9px/1.2 Archivo,sans-serif;text-transform:uppercase;letter-spacing:.18em;cursor:pointer;transform:rotate(-1.5deg);box-shadow:2px 2px 0 rgba(27,42,56,.12);transition:background .18s,color .18s,transform .18s}.ds-pull-tab::before{content:'';position:absolute;left:9px;top:50%;width:9px;height:9px;border-radius:50%;background:#10201d;transform:translateY(-50%)}.ds-pull-tab:hover{background:var(--sunflower);transform:rotate(-1.5deg) translateY(-1px)}.ds-pull-tab:focus-visible{outline:2px solid var(--ink);outline-offset:3px}.ds-pull-tab[aria-pressed='true']{background:var(--tomato-dark);color:var(--cream)}"
+    },
+    {
+      "name": "Search Field",
+      "kind": "input",
+      "refersTo": "search-field",
+      "description": "The live index search; a printed field with a 2px focus ring and a 32px clear control.",
+      "html": "<label class='ds-search'><svg class='ds-search-icon' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' aria-hidden='true'><circle cx='11' cy='11' r='8'/><path d='m21 21-4.34-4.34'/></svg><input class='ds-search-input' type='search' placeholder='Find a world or project' aria-label='Find a world or project' /></label>",
+      "css": ".ds-search{display:flex;align-items:center;gap:8px;height:44px;padding:0 12px;border:1px solid rgba(27,42,56,.22);background:rgba(250,243,228,.5)}.ds-search:focus-within{border-color:var(--tomato);background:var(--paper-light);box-shadow:0 0 0 2px var(--tomato)}.ds-search-icon{width:16px;height:16px;flex:0 0 auto;color:var(--ink-soft)}.ds-search-input{width:100%;min-width:0;border:0;padding:0;background:transparent;color:var(--ink);font:400 14px/1.5 Archivo,sans-serif;outline:none}.ds-search-input::placeholder{color:var(--ink-soft);opacity:1}"
+    },
+    {
+      "name": "Planet Key Item",
+      "kind": "nav",
+      "refersTo": "planet-key-item",
+      "description": "The printed plate legend that names each world; a 32px link with a spot-ink dot.",
+      "html": "<a class='ds-key' href='#'><span class='ds-key-dot'></span>About</a>",
+      "css": ".ds-key{display:inline-flex;align-items:center;gap:6px;min-height:32px;padding:2px 0;border-bottom:1px solid transparent;color:var(--ink);font:500 10px/1.2 Archivo,sans-serif;text-transform:uppercase;letter-spacing:.14em;text-decoration:none}.ds-key:hover{border-color:var(--tomato);color:var(--tomato)}.ds-key:focus-visible{outline:2px solid var(--tomato);outline-offset:3px}.ds-key-dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--cobalt);box-shadow:inset 0 0 0 1px rgba(27,42,56,.3)}"
+    },
+    {
+      "name": "Dossier Close",
+      "kind": "button",
+      "refersTo": "dossier-close",
+      "description": "The fold-back control on the dossier sheet; a paper stamp with a drawn X.",
+      "html": "<button class='ds-close'>Fold back <svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' aria-hidden='true'><path d='M18 6 6 18M6 6l12 12'/></svg></button>",
+      "css": ".ds-close{display:inline-flex;align-items:center;gap:8px;min-height:32px;padding:8px 12px;border:1px solid rgba(27,42,56,.22);background:var(--paper-light);color:var(--ink);font:500 10px/1.2 Archivo,sans-serif;text-transform:uppercase;letter-spacing:.16em;cursor:pointer}.ds-close svg{width:14px;height:14px}.ds-close:hover{border-color:var(--tomato);color:var(--tomato)}.ds-close:focus-visible{outline:2px solid var(--tomato);outline-offset:3px}"
+    },
+    {
+      "name": "Index Row",
+      "kind": "nav",
+      "refersTo": "index-row",
+      "description": "The printed contents row: world name, tagline, planet, and a hairline rule.",
+      "html": "<a class='ds-index' href='#'><span class='ds-index-copy'><span class='ds-index-name'>About</span><span class='ds-index-desc'>The person behind the system</span></span><span class='ds-index-meta'>Terra</span></a>",
+      "css": ".ds-index{display:flex;align-items:center;gap:12px;min-height:44px;padding:10px 4px;border-bottom:1px solid rgba(27,42,56,.22);color:var(--ink);text-decoration:none;transition:background .18s,padding .18s}.ds-index:hover{background:rgba(242,179,26,.14);padding-left:10px}.ds-index:focus-visible{outline:2px solid var(--tomato);outline-offset:3px}.ds-index-copy{flex:1;min-width:0}.ds-index-name{display:block;font:600 16px/1.2 Archivo,sans-serif;letter-spacing:-.01em}.ds-index-desc{display:block;margin-top:2px;font:400 12px/1.35 Archivo,sans-serif;color:var(--ink-soft)}.ds-index-meta{font:500 10px/1.2 Archivo,sans-serif;text-transform:uppercase;letter-spacing:.14em;color:var(--ink-soft)}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Pop-Up Orbit",
+    "overview": "The portfolio is one working paper solar system, not a dark starfield with cards floating on it. A large-format 1970s science annual is the physical reference: warm stock, flat process inks, a real gutter, die-cut discs, fold-out dossiers, and a pull tab that sets the system moving. The paper is the page; the solar system is the navigation. The interface is an Experience surface, so the artifact leads. A visitor reads the masthead on the left page, sees four named worlds on the plate, pulls the tab, and unfolds a dossier with real work, skills, and contact details. The flat guide below is the printable, machine-readable edition. The tone is playful, tactile, and quietly confident; it never becomes a children's book or a sci-fi console.",
+    "keyCharacteristics": [
+      "Warm cream stock and prussian ink; the deep desk is the only dark field.",
+      "Five flat spot inks: cobalt, tomato, sunflower, forest, and lilac.",
+      "Square paper sheets, hairline orbits, die-cut circles, and fold-out panels.",
+      "Self-hosted Young Serif for the display; Archivo for body and labels.",
+      "Search, hover, focus, touch, reduced motion, no-JS, and print are all designed states.",
+      "One authored motion: the orbit; the map steadies on hover/focus and starts paused on touch."
+    ],
+    "rules": [
+      { "name": "The Paper Ground Rule", "body": "Every screen is a sheet of warm stock. The deep desk exists to hold the book, not to become a second page.", "section": "colors" },
+      { "name": "The Spot-Ink Rule", "body": "Cobalt, tomato, sunflower, forest, and lilac are flat printing inks. Each world owns one; never gradient them, never glow them, and never scatter all five as UI chrome.", "section": "colors" },
+      { "name": "The Registration Rule", "body": "Keep the print marks: the 1px off-register tomato offset on display headings and the registration target at the plate's top-left. They are evidence of the press, not decoration.", "section": "colors" },
+      { "name": "The One Display Voice Rule", "body": "Young Serif is the only display face. No second serif, no system display face, no condensed substitute.", "section": "typography" },
+      { "name": "The No-Eyebrow Rule", "body": "A label never sits above a heading. The heading carries its own weight; labels live beside, below, or in the margin.", "section": "typography" },
+      { "name": "The Paper-Edge Rule", "body": "A shadow describes a physical layer: it carries an offset and a blur. If it reads as a halo, remove it.", "section": "elevation" },
+      { "name": "The Die-Cut Rule", "body": "Circles are objects punched out of the page, never badges added to it. They carry no gloss, no border radius beyond 50%, and no gradient sphere shading.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do keep the warm stock, prussian ink, five flat spot inks, and the grain.",
+      "Do keep the gutter, the 0px paper edges, the die-cut discs, the registration target, and the 1px ink misregistration.",
+      "Do keep the plate key; the worlds must be named above the fold at 390, 768, and 1440.",
+      "Do keep the four project moons visible at rest and the Work dossier's moon rows.",
+      "Do keep the paper pull tab at every width, including its die-cut hole and active deep-tomato state.",
+      "Do keep the 32px controls, 2px focus ring, keyboard trap, reduced-motion pause, touch pause, and flat-guide fallback.",
+      "Do keep the print stylesheet: white paper, flat guide only, project URLs."
+    ],
+    "donts": [
+      "Don't introduce glass, backdrop blur, neon, gradient text, a dark starfield, or a glowing-gradient planet.",
+      "Don't turn the spread into same-size cards, pill chips, or a dashboard.",
+      "Don't put a kicker or eyebrow above a heading.",
+      "Don't gradient the spot inks or use them as generic UI chrome.",
+      "Don't hide the world names, the moons, or the pull tab on small screens.",
+      "Don't shrink the desktop spread into a phone; the phone is a single page, not a miniature book.",
+      "Don't invent clients, metrics, testimonials, a CV, or a live AI chat; use only the real portfolio content.",
+      "Don't use a system display face, Unicode glyph icons, or a second display serif.",
+      "Don't remove the flat guide, the print edition, or the no-JS anchors."
+    ]
+  }
+}

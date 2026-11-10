@@ -1,0 +1,268 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-10T01:45:00Z",
+  "title": "Design System: Bradley Gichuru — Portfolio OS",
+  "extensions": {
+    "colorMeta": {
+      "ivory": {
+        "role": "neutral",
+        "displayName": "Ivory",
+        "canonical": "#f7f1e6",
+        "tonalRamp": ["oklch(18% 0.02 85)", "oklch(30% 0.02 85)", "oklch(42% 0.02 85)", "oklch(55% 0.02 85)", "oklch(68% 0.02 85)", "oklch(80% 0.02 85)", "oklch(90% 0.02 85)", "oklch(96% 0.02 85)"]
+      },
+      "sand": {
+        "role": "neutral",
+        "displayName": "Sand",
+        "canonical": "#e7dfcf",
+        "tonalRamp": ["oklch(18% 0.02 80)", "oklch(30% 0.02 80)", "oklch(42% 0.02 80)", "oklch(55% 0.02 80)", "oklch(68% 0.02 80)", "oklch(80% 0.02 80)", "oklch(87% 0.02 80)", "oklch(94% 0.02 80)"]
+      },
+      "b-teal": {
+        "role": "primary",
+        "displayName": "Deep Teal",
+        "canonical": "#0f4b4f",
+        "tonalRamp": ["oklch(18% 0.04 195)", "oklch(28% 0.05 195)", "oklch(38% 0.06 195)", "oklch(48% 0.06 195)", "oklch(58% 0.05 195)", "oklch(70% 0.04 195)", "oklch(82% 0.03 195)", "oklch(94% 0.02 195)"]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#1d1d1f",
+        "tonalRamp": ["oklch(15% 0.005 280)", "oklch(25% 0.005 280)", "oklch(35% 0.005 280)", "oklch(45% 0.005 280)", "oklch(55% 0.005 280)", "oklch(70% 0.005 280)", "oklch(82% 0.005 280)", "oklch(96% 0.005 280)"]
+      },
+      "ink-muted": {
+        "role": "neutral",
+        "displayName": "Muted Ink",
+        "canonical": "#5c5c63",
+        "tonalRamp": ["oklch(18% 0.008 280)", "oklch(28% 0.008 280)", "oklch(38% 0.008 280)", "oklch(48% 0.008 280)", "oklch(58% 0.008 280)", "oklch(70% 0.008 280)", "oklch(82% 0.008 280)", "oklch(95% 0.008 280)"]
+      },
+      "window": {
+        "role": "neutral",
+        "displayName": "Window White",
+        "canonical": "#fbfaf7",
+        "tonalRamp": ["oklch(18% 0.01 85)", "oklch(30% 0.01 85)", "oklch(42% 0.01 85)", "oklch(55% 0.01 85)", "oklch(68% 0.01 85)", "oklch(80% 0.01 85)", "oklch(90% 0.01 85)", "oklch(98% 0.01 85)"]
+      },
+      "window-secondary": {
+        "role": "neutral",
+        "displayName": "Window Grey",
+        "canonical": "#f2f0ea",
+        "tonalRamp": ["oklch(18% 0.012 85)", "oklch(30% 0.012 85)", "oklch(42% 0.012 85)", "oklch(55% 0.012 85)", "oklch(68% 0.012 85)", "oklch(80% 0.012 85)", "oklch(88% 0.012 85)", "oklch(95% 0.012 85)"]
+      },
+      "accent": {
+        "role": "primary",
+        "displayName": "System Blue",
+        "canonical": "#0057d9",
+        "tonalRamp": ["oklch(15% 0.16 265)", "oklch(25% 0.16 265)", "oklch(35% 0.16 265)", "oklch(45% 0.16 265)", "oklch(55% 0.16 265)", "oklch(70% 0.14 265)", "oklch(82% 0.10 265)", "oklch(95% 0.05 265)"]
+      },
+      "terminal": {
+        "role": "neutral",
+        "displayName": "Terminal Black",
+        "canonical": "#0b0f13",
+        "tonalRamp": ["oklch(14% 0.01 240)", "oklch(24% 0.01 240)", "oklch(34% 0.01 240)", "oklch(44% 0.01 240)", "oklch(54% 0.01 240)", "oklch(68% 0.01 240)", "oklch(80% 0.01 240)", "oklch(94% 0.01 240)"]
+      },
+      "terminal-text": {
+        "role": "neutral",
+        "displayName": "Terminal Text",
+        "canonical": "#e6edf3",
+        "tonalRamp": ["oklch(18% 0.01 240)", "oklch(30% 0.01 240)", "oklch(42% 0.01 240)", "oklch(55% 0.01 240)", "oklch(68% 0.01 240)", "oklch(80% 0.01 240)", "oklch(90% 0.01 240)", "oklch(96% 0.01 240)"]
+      },
+      "terminal-green": {
+        "role": "tertiary",
+        "displayName": "Terminal Green",
+        "canonical": "#7ee787",
+        "tonalRamp": ["oklch(20% 0.08 145)", "oklch(32% 0.10 145)", "oklch(44% 0.12 145)", "oklch(56% 0.13 145)", "oklch(68% 0.14 145)", "oklch(80% 0.14 145)", "oklch(88% 0.12 145)", "oklch(95% 0.07 145)"]
+      },
+      "dark-wall": {
+        "role": "neutral",
+        "displayName": "Night Water",
+        "canonical": "#071b22",
+        "tonalRamp": ["oklch(15% 0.03 210)", "oklch(25% 0.03 210)", "oklch(35% 0.03 210)", "oklch(45% 0.03 210)", "oklch(55% 0.03 210)", "oklch(70% 0.03 210)", "oklch(82% 0.03 210)", "oklch(95% 0.03 210)"]
+      },
+      "dark-window": {
+        "role": "neutral",
+        "displayName": "Night Window",
+        "canonical": "#1e1f23",
+        "tonalRamp": ["oklch(15% 0.005 280)", "oklch(25% 0.005 280)", "oklch(35% 0.005 280)", "oklch(45% 0.005 280)", "oklch(55% 0.005 280)", "oklch(70% 0.005 280)", "oklch(82% 0.005 280)", "oklch(95% 0.005 280)"]
+      },
+      "dark-text": {
+        "role": "neutral",
+        "displayName": "Night Text",
+        "canonical": "#f5f5f7",
+        "tonalRamp": ["oklch(18% 0.005 280)", "oklch(30% 0.005 280)", "oklch(42% 0.005 280)", "oklch(55% 0.005 280)", "oklch(68% 0.005 280)", "oklch(80% 0.005 280)", "oklch(90% 0.005 280)", "oklch(97% 0.005 280)"]
+      },
+      "dark-accent": {
+        "role": "primary",
+        "displayName": "Night Blue",
+        "canonical": "#6cb0ff",
+        "tonalRamp": ["oklch(18% 0.08 250)", "oklch(30% 0.10 250)", "oklch(42% 0.12 250)", "oklch(54% 0.13 250)", "oklch(66% 0.13 250)", "oklch(76% 0.11 250)", "oklch(86% 0.08 250)", "oklch(95% 0.04 250)"]
+      },
+      "tone-teal": {
+        "role": "tertiary",
+        "displayName": "Newwell Teal",
+        "canonical": "#0f5f59",
+        "tonalRamp": ["oklch(18% 0.04 190)", "oklch(28% 0.05 190)", "oklch(38% 0.06 190)", "oklch(48% 0.06 190)", "oklch(58% 0.05 190)", "oklch(70% 0.04 190)", "oklch(82% 0.03 190)", "oklch(94% 0.02 190)"]
+      },
+      "tone-rose": {
+        "role": "tertiary",
+        "displayName": "Hizitickets Rose",
+        "canonical": "#a3322a",
+        "tonalRamp": ["oklch(18% 0.10 30)", "oklch(28% 0.12 30)", "oklch(38% 0.14 30)", "oklch(48% 0.15 30)", "oklch(58% 0.14 30)", "oklch(70% 0.11 30)", "oklch(82% 0.08 30)", "oklch(94% 0.04 30)"]
+      },
+      "tone-amber": {
+        "role": "tertiary",
+        "displayName": "Towing Guru Amber",
+        "canonical": "#8a5a12",
+        "tonalRamp": ["oklch(18% 0.08 75)", "oklch(28% 0.10 75)", "oklch(38% 0.12 75)", "oklch(48% 0.13 75)", "oklch(58% 0.12 75)", "oklch(70% 0.10 75)", "oklch(82% 0.07 75)", "oklch(94% 0.04 75)"]
+      },
+      "tone-forest": {
+        "role": "tertiary",
+        "displayName": "Budgetlite Forest",
+        "canonical": "#245c41",
+        "tonalRamp": ["oklch(18% 0.05 155)", "oklch(28% 0.06 155)", "oklch(38% 0.07 155)", "oklch(48% 0.08 155)", "oklch(58% 0.07 155)", "oklch(70% 0.06 155)", "oklch(82% 0.04 155)", "oklch(94% 0.02 155)"]
+      },
+      "artwork-black": {
+        "role": "neutral",
+        "displayName": "Artwork Black",
+        "canonical": "#0a0612",
+        "tonalRamp": ["oklch(12% 0.02 290)", "oklch(22% 0.02 290)", "oklch(32% 0.02 290)", "oklch(42% 0.02 290)", "oklch(55% 0.02 290)", "oklch(70% 0.02 290)", "oklch(82% 0.02 290)", "oklch(95% 0.02 290)"]
+      },
+      "artwork-violet": {
+        "role": "tertiary",
+        "displayName": "Artwork Violet",
+        "canonical": "#8b63c0",
+        "tonalRamp": ["oklch(18% 0.06 300)", "oklch(28% 0.08 300)", "oklch(38% 0.10 300)", "oklch(48% 0.12 300)", "oklch(58% 0.13 300)", "oklch(70% 0.11 300)", "oklch(82% 0.08 300)", "oklch(94% 0.04 300)"]
+      },
+      "b-amber": {
+        "role": "tertiary",
+        "displayName": "Amber B",
+        "canonical": "#f3c17a",
+        "tonalRamp": ["oklch(18% 0.06 75)", "oklch(28% 0.08 75)", "oklch(38% 0.10 75)", "oklch(48% 0.11 75)", "oklch(58% 0.12 75)", "oklch(70% 0.12 75)", "oklch(82% 0.10 75)", "oklch(94% 0.05 75)"]
+      },
+      "tone-cobalt": {
+        "role": "tertiary",
+        "displayName": "Cobalt",
+        "canonical": "#2254b8",
+        "tonalRamp": ["oklch(18% 0.12 265)", "oklch(28% 0.14 265)", "oklch(38% 0.16 265)", "oklch(48% 0.16 265)", "oklch(58% 0.14 265)", "oklch(70% 0.11 265)", "oklch(82% 0.08 265)", "oklch(94% 0.04 265)"]
+      }
+    },
+    "typographyMeta": {
+      "app-body": { "displayName": "App Body", "purpose": "Window copy, descriptions, notes, and metadata at 13px." },
+      "display": { "displayName": "Display", "purpose": "The welcome name, 700 at 27–34px." },
+      "app-title": { "displayName": "App Title", "purpose": "The Web project name, 700 at 28–40px." },
+      "reader-title": { "displayName": "Reader Title", "purpose": "The flat edition's name, 700 at 30–44px." },
+      "label": { "displayName": "Label", "purpose": "Sidebar labels, preview types, metadata, and project kinds." },
+      "mono": { "displayName": "Mono", "purpose": "Every Terminal command and output line." }
+    },
+    "shadows": [
+      { "name": "window-rest", "value": "0 20px 50px rgba(30,28,22,.2), 0 2px 8px rgba(30,28,22,.1)", "purpose": "A background app window." },
+      { "name": "window-active", "value": "0 28px 70px rgba(25,24,20,.28), 0 3px 10px rgba(25,24,20,.14)", "purpose": "The focused window." },
+      { "name": "chrome", "value": "0 24px 60px rgba(30,28,22,.24), 0 2px 8px rgba(30,28,22,.12)", "purpose": "Menu panels, Controls, and notifications." },
+      { "name": "dock", "value": "0 14px 34px rgba(25,24,20,.22), inset 0 1px 0 rgba(255,255,255,.45)", "purpose": "The floating dock." }
+    ],
+    "motion": [
+      { "name": "power-on", "value": "720ms cubic-bezier(.2,.8,.2,1)", "purpose": "The desktop wakes from dark to light on load." },
+      { "name": "notification-in", "value": "420ms cubic-bezier(.2,.8,.2,1)", "purpose": "The welcome notification arrives." },
+      { "name": "dock-lift", "value": "160ms cubic-bezier(.2,.8,.2,1)", "purpose": "The dock icon lifts and its neighbour follows." },
+      { "name": "reduced-motion", "value": "animation/transition: none", "purpose": "All motion freezes; the artwork stays still." }
+    ],
+    "breakpoints": [
+      { "name": "laptop", "value": "1180px" },
+      { "name": "compact", "value": "900px" },
+      { "name": "phone", "value": "560px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Window",
+      "kind": "container",
+      "refersTo": "window",
+      "description": "An opaque app frame with a 38px title bar, three 24px traffic-light targets, 11px corners, and drag-by-titlebar. The active window gets the stronger shadow.",
+      "html": "<section class='os-window is-active' aria-label='Work'><div class='os-titlebar'><div class='traffic-lights'>…</div><span class='os-window-title'>Work</span></div><div class='os-window-body'>…</div></section>",
+      "css": ".os-window{position:absolute;display:flex;flex-direction:column;overflow:hidden;border:1px solid rgba(30,30,35,.13);border-radius:11px;background:#fbfaf7;box-shadow:0 20px 50px rgba(30,28,22,.2),0 2px 8px rgba(30,28,22,.1);color:#1d1d1f}.os-window.is-active{box-shadow:0 28px 70px rgba(25,24,20,.28),0 3px 10px rgba(25,24,20,.14)}.os-titlebar{display:flex;min-height:38px;flex:0 0 38px;align-items:center;gap:8px;padding:0 10px;border-bottom:1px solid rgba(30,30,35,.13);background:rgba(242,240,234,.94)}.os-window-body{flex:1;min-height:0;overflow:auto}"
+    },
+    {
+      "name": "Menu Bar",
+      "kind": "navigation",
+      "refersTo": "menu-bar",
+      "description": "The 28px translucent system bar: B menu, active app, File / Edit / View / Window / Help, Search, Controls, Wi-Fi, battery, and live date/time. Menus focus their first item and restore focus on Escape.",
+      "html": "<header class='os-menubar' aria-label='Menu bar'><button class='menubar-b' aria-label='Portfolio menu'><svg class='menubar-b-mark'>…</svg></button><span class='menubar-app'>Welcome</span><nav class='menubar-menus'>…</nav><div class='menubar-right'>…</div></header>",
+      "css": ".os-menubar{position:absolute;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;gap:14px;height:28px;padding:0 10px;border-bottom:1px solid rgba(30,30,35,.13);background:rgba(250,248,243,.9);-webkit-backdrop-filter:blur(24px) saturate(1.5);backdrop-filter:blur(24px) saturate(1.5);color:#1d1d1f;font-size:12.5px}.menubar-b{display:grid;width:26px;height:24px;place-items:center;border:0;border-radius:4px;background:transparent;color:#1d1d1f;cursor:pointer}.menubar-b-mark{width:12px;height:20px}"
+    },
+    {
+      "name": "Dock",
+      "kind": "navigation",
+      "refersTo": "dock",
+      "description": "The floating translucent dock with Work, Notes, Terminal, Mail, Web, Apps, and Trash. 48px icons in 54px targets on desktop, 40px in 44px on compact; dots mark running apps.",
+      "html": "<nav class='os-dock' aria-label='Dock'><button class='dock-item' aria-label='Open Work'><span class='dock-icon'>…</span><span class='dock-dot'></span></button>…</nav>",
+      "css": ".os-dock{position:absolute;bottom:calc(7px + env(safe-area-inset-bottom));left:50%;z-index:120;display:flex;align-items:flex-end;gap:3px;padding:6px 9px 5px;transform:translateX(-50%);border:1px solid rgba(30,30,35,.13);border-radius:18px;background:rgba(250,248,243,.82);-webkit-backdrop-filter:blur(28px) saturate(1.55);backdrop-filter:blur(28px) saturate(1.55);box-shadow:0 14px 34px rgba(25,24,20,.22),inset 0 1px 0 rgba(255,255,255,.45)}.dock-item{position:relative;display:flex;width:54px;height:54px;align-items:center;justify-content:center;border:0;background:transparent;cursor:pointer}.dock-icon{display:block;width:48px;height:48px;filter:drop-shadow(0 5px 7px rgba(25,24,20,.24))}"
+    },
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "primary-button",
+      "description": "The System Blue action: 30px tall, 6px corners, white text. Used for Open Work, Open project, Visit live project, Reply, and Say hello.",
+      "html": "<button class='os-button os-button--primary'>Open Work <svg aria-hidden='true'>…</svg></button>",
+      "css": ".os-button{display:inline-flex;min-height:30px;align-items:center;justify-content:center;gap:6px;padding:0 13px;border:1px solid rgba(30,30,35,.22);border-radius:6px;background:#f2f0ea;color:#1d1d1f;font:500 12.5px/1 system-ui,sans-serif;text-decoration:none;cursor:pointer}.os-button--primary{border-color:transparent;background:#0057d9;color:#fff}.os-button:focus-visible{outline:2px solid #0057d9;outline-offset:2px}"
+    },
+    {
+      "name": "Terminal",
+      "kind": "app",
+      "refersTo": "terminal",
+      "description": "The one true-black room. A local command interface with prompt history, a green caret, and real portfolio commands; never a real shell.",
+      "html": "<div class='app terminal-app'><div class='terminal-log' role='log' aria-live='polite'>…</div><div class='terminal-input-line'><span class='term-prompt-inline'>bradley@portfolio ~ %</span><input class='terminal-input' aria-label='Terminal command input'></div></div>",
+      "css": ".terminal-app{display:flex;height:100%;flex-direction:column;padding:12px 14px;background:#0b0f13;color:#e6edf3;font-family:ui-monospace,Consolas,monospace;font-size:12.5px;line-height:1.55;cursor:text}.term-prompt-inline{color:#7ee787;font-weight:600}.terminal-log{flex:1;min-height:0;overflow:auto}.terminal-input-line{display:flex;flex:0 0 auto;align-items:center;gap:8px;padding-top:5px}.terminal-input{min-width:0;flex:1;border:0;padding:0;background:transparent;color:#e6edf3;caret-color:#7ee787;font:inherit;outline:none}.terminal-input:focus-visible{outline:2px solid #7ee787;outline-offset:3px}"
+    },
+    {
+      "name": "Reader",
+      "kind": "surface",
+      "refersTo": "window",
+      "description": "The flat, printable edition below the desktop: a 1000px window, 70ch reading column, every project, skill, and contact link. Prints white with the desktop hidden and project URLs appended.",
+      "html": "<section id='reader' class='reader' aria-labelledby='reader-title'><div class='reader-window'><div class='reader-bar'>…</div><div class='reader-body'><h2 id='reader-title'>Bradley Gichuru</h2>…</div></div></section>",
+      "css": ".reader{position:relative;padding:44px 18px 30px;background:#e7e3db;color:#1d1d1f}.reader-window{width:min(1000px,100%);margin:0 auto;overflow:hidden;border:1px solid rgba(30,30,35,.18);border-radius:12px;background:#fdfbf6;box-shadow:0 24px 60px rgba(30,28,22,.18)}.reader-body{max-width:70ch;margin:0 auto;padding:42px 38px 46px}.reader-section{margin-top:38px;padding-top:24px;border-top:1px solid rgba(30,30,35,.14)}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Portfolio Desktop",
+    "overview": "The portfolio is a working desktop, not a webpage dressed as a laptop. A visitor lands on a full-bleed Portfolio OS: the supplied violet ASCII-hands artwork on near-black, a translucent light menu bar, a dock, and a centered welcome window that names Bradley and puts the four live projects one click away. The two hands frame the welcome; the authored B lives in the chrome, not as a wallpaper glyph. There is no hardware frame; the screen is the page. The OS is the navigation and the proof. Work is a Finder-like project browser; Notes is About; Terminal is Skills; Mail is Contact; Web is the project page; About This Portfolio is the system card. Search, Apps, and Controls are original features with original names. The flat reader below the desktop is the accessible, no-JS, printable edition. The tone is calm, precise, and quietly playful: a real tool you can use, not a costume.",
+    "keyCharacteristics": [
+      "The user-supplied violet ASCII-hands artwork on near-black, full-bleed and fixed.",
+      "Light windows by default; dark mode restages the windows, menu bar, dock, and tone colors while the artwork stays fixed.",
+      "The authored B lives in the welcome, menu bar, app icon, README file, favicon, and sleep screen.",
+      "White/graphite windows with red/yellow/green traffic lights; 11px corners; opaque content panes.",
+      "Translucent chrome only: menu bar, dock, Controls, notifications.",
+      "System UI type in the windows; one true-black Terminal in monospace.",
+      "Every interaction a visitor can see actually works: windows drag, apps open, Search finds, Terminal answers, contact links resolve.",
+      "Original naming and icons. No Apple logos, feature names, or product names."
+    ],
+    "rules": [
+      { "name": "The Lit Desktop Rule", "body": "Start with light windows. Dark mode restages the windows, chrome, and tone colors; the supplied artwork is the fixed ground in both modes.", "section": "colors" },
+      { "name": "The One Black Room Rule", "body": "The Terminal is the one true-black app surface. The artwork is a near-black ground, not a UI surface; every app surface is white, graphite, or a project tone.", "section": "colors" },
+      { "name": "The Chrome-Only Blur Rule", "body": "Backdrop blur belongs to the menu bar, dock, Controls, and notifications. Content windows and the reader stay opaque.", "section": "elevation" },
+      { "name": "The Authored B Rule", "body": "The B is an SVG path (B_PATH), never a font glyph. It appears in the welcome, menu bar, app icon, README file, favicon, and sleep screen, never as a watermark over the artwork.", "section": "shapes" },
+      { "name": "The No-Apple-Names Rule", "body": "The features are Search, Apps, and Controls. No Apple logos, product names, feature names, or SF fonts.", "section": "colors" },
+      { "name": "The Native Voice Rule", "body": "Use the system UI face for the OS and the system mono face for the Terminal. No display webfont, no brand typeface, no second sans.", "section": "typography" },
+      { "name": "The No-Eyebrow Rule", "body": "A project's type sits beside or below its name, never as a kicker above it.", "section": "typography" },
+      { "name": "The Layer Rule", "body": "A shadow describes a window above the desktop. If it reads as a glow, remove it.", "section": "elevation" },
+      { "name": "The No-Drag-Only Rule", "body": "Dragging is never the only route to an action. Window → Move Left / Move Right / Center moves the active window from the keyboard.", "section": "components" }
+    ],
+    "dos": [
+      "Do keep the supplied violet artwork full-bleed and fixed, with the welcome centered in the hands' gap.",
+      "Do keep the authored B path everywhere the mark appears.",
+      "Do keep the menu bar, dock, and windows working: drag, minimize, zoom, close, open, search, type.",
+      "Do keep the three ways into contact: Mail, the welcome's Say Hello, and the reader.",
+      "Do keep the original names Search, Apps, and Controls; never reintroduce Apple feature names.",
+      "Do keep the 24px minimum targets, 2px focus rings, keyboard routes, reduced-motion freeze, and no-JS reader.",
+      "Do keep the dark mode a full restaging, not an inversion.",
+      "Do keep the print stylesheet: white reader, desktop hidden, project URLs visible."
+    ],
+    "donts": [
+      "Don't add laptop hardware, a notch, a keyboard deck, or a desk scene; the screen is the page.",
+      "Don't reintroduce the generated B wallpaper, contour rings, or pointer parallax.",
+      "Don't put content in glass cards, neon gradients, or a hero-and-cards layout.",
+      "Don't use pure black outside the Terminal or pure white as a page ground.",
+      "Don't use blur on content windows.",
+      "Don't put a kicker above a heading.",
+      "Don't make dragging, hover, or a pointer the only route to any action.",
+      "Don't invent clients, metrics, testimonials, a CV, or a live AI.",
+      "Don't use Apple logos, Apple feature names, or SF fonts."
+    ]
+  }
+}
