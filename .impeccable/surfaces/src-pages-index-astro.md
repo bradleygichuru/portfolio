@@ -9,7 +9,7 @@ related_targets: []
 
 ## Scope and visitor mode
 
-Experience. On tablets and larger screens the full-bleed desktop is the portfolio. On phones the portfolio is an iOS-style home screen with full-screen app views. The reader below the screen is the accessible, no-JS edition.
+Experience. On tablets and larger screens the full-bleed desktop is the portfolio. On phones the portfolio is an iOS-style home screen with full-screen app views. The README is an app inside the OS; a hidden flat fallback serves no-JS and print.
 
 ## Audience and job
 
@@ -17,7 +17,7 @@ Potential clients and employers, on desktop or phone. They should understand Bra
 
 ## Chosen direction
 
-**The Portfolio Desktop** — a full-bleed Portfolio OS inspired by the macOS desktop metaphor, with original naming. The user-supplied violet ASCII-hands artwork on near-black is the ground; the authored B lives in the welcome and chrome, not as a wallpaper glyph; a translucent light menu bar and dock; white/graphite windows with traffic lights (light windows by default, dark mode available); Search; Apps; Controls; and a real local Terminal. The apps are Work (a project browser), Notes/About, Terminal/Skills, Mail/Contact, Web/projects, and About This Portfolio. No Apple logos or trademarks.
+**The Portfolio Desktop** — a full-bleed Portfolio OS inspired by the macOS desktop metaphor, with original naming. The user-supplied violet ASCII-hands artwork on near-black is the ground; the authored B lives in the welcome and chrome, not as a wallpaper glyph; a translucent light menu bar and dock; white/graphite windows with traffic lights (light windows by default, dark mode available); Search; Apps; Controls; and a real local Terminal. The apps are Work (a project browser), Notes/About, Terminal/Skills, Mail/Contact, Web/projects, About This Portfolio, and README. No Apple logos or trademarks.
 
 ## Raises from the hand
 
@@ -35,7 +35,7 @@ THESIS: The portfolio is a working full-bleed Portfolio OS desktop, not a webpag
 
 OWN-WORLD: A Portfolio OS on the user-supplied violet ASCII-hands artwork over near-black. Tablets and larger screens use a translucent light menu bar and dock, white/graphite windows with red/yellow/green traffic lights, Search, Apps, Controls, and a mono Terminal. Phones use an iOS-style status bar, welcome widget, four-column app grid, Search pill, four-icon dock, full-screen app views with back/home navigation, and a Controls sheet. The authored geometric B lives in the welcome or widget, menu bar or status bar, app icon, README file, favicon, and sleep screen, never as a wallpaper glyph. The Terminal is the one true-black app surface; the artwork is the ground, not a UI surface. System blue carries action; original naming and icons; no Apple logos, no glass cards, no hero-and-cards layout.
 
-STORY: On a large screen the visitor lands on the desktop. The welcome window sits in the gap between the artwork's two hands, names Bradley, gives the one-line thesis, and offers Open Work, Read About, and Say Hello. The dock and menu bar are the navigation; Work opens the project browser; a project opens the Web app; the Terminal answers `help`; Search finds anything; Mail opens the real contact channels. On a phone the visitor lands on an iOS-style home screen: the welcome widget names Bradley and offers the same three moves; the app grid and dock open full-screen apps; Search opens a full-screen sheet; Controls is a bottom sheet; the reader below is the flat edition.
+STORY: On a large screen the visitor lands on the desktop. The welcome window sits in the gap between the artwork's two hands, names Bradley, gives the one-line thesis, and offers Open Work, Read About, and Say Hello. The dock and menu bar are the navigation; Work opens the project browser; a project opens the Web app; the Terminal answers `help`; Search finds anything; Mail opens the real contact channels. On a phone the visitor lands on an iOS-style home screen: the welcome widget names Bradley and offers the same three moves; the app grid and dock open full-screen apps; Search opens a full-screen sheet; Controls is a bottom sheet; the README opens as a full-screen app; the flat fallback is hidden unless JavaScript is off or the page is printed.
 
 FIRST VIEWPORT: On a large screen, a 100svh Portfolio OS desktop: the menu bar (B, Welcome, app menus, Search, Controls, Wi-Fi, battery, date/time), the supplied violet ASCII-hands artwork, the centered welcome window with the name/role/thesis and three actions, the desktop icons, the dock, and a tip notification. On a phone, a 100svh iOS-style home screen: the status bar (time, signal, Wi-Fi, battery), the welcome widget with the name/role/thesis and Open Work / Read About / Say Hello, the four-column app grid, the Search pill, the four-icon dock, and the home indicator. Open Work is the primary action on both.
 

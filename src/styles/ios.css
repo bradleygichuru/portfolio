@@ -309,20 +309,6 @@
   white-space: nowrap;
 }
 
-.ios-readme-icon {
-  display: grid;
-  place-items: center;
-  border-radius: 14px;
-  background: color-mix(in srgb, var(--os-surface) 90%, transparent);
-  box-shadow: var(--ios-icon-shadow);
-}
-
-.ios-readme-icon .readme-glyph {
-  width: 34px;
-  height: 42px;
-  box-shadow: none;
-}
-
 .ios-search-pill {
   display: flex;
   min-height: 44px;
@@ -905,7 +891,36 @@
     font-size: 30px;
   }
 
-  .reader-selection {
-    scroll-margin-top: 44px;
+}
+
+@media print {
+  .portfolio-os {
+    display: none !important;
+  }
+
+  .reader-fallback {
+    display: block !important;
+  }
+
+  .reader {
+    padding: 0 !important;
+    background: #fff !important;
+  }
+
+  .reader-window {
+    width: auto;
+    overflow: visible;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .reader-bar {
+    display: none !important;
+  }
+
+  .reader-body {
+    max-width: none;
+    padding: 0;
   }
 }

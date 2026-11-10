@@ -241,9 +241,9 @@ components:
 
 The portfolio is a working desktop, not a webpage dressed as a laptop. A visitor lands on a full-bleed Portfolio OS: the supplied violet ASCII-hands artwork on near-black, a translucent light menu bar, a dock, and a centered welcome window that names Bradley and puts the four live projects one click away. The two hands frame the welcome; the authored **B** lives in the chrome, not as a wallpaper glyph. There is no hardware frame; the screen is the page.
 
-The OS is the navigation and the proof. Work is a project browser; Notes is About; Terminal is Skills; Mail is Contact; Web is the project page; About This Portfolio is the system card. Search, Apps, and Controls are original features with original names. The flat reader below the desktop is the accessible, no-JS, printable edition. The tone is calm, precise, and quietly playful: a real tool you can use, not a costume.
+The OS is the navigation and the proof. Work is a project browser; Notes is About; Terminal is Skills; Mail is Contact; Web is the project page; About This Portfolio is the system card. Search, Apps, and Controls are original features with original names. The README is a document app inside the OS; a hidden flat edition handles no-JS and print. The tone is calm, precise, and quietly playful: a real tool you can use, not a costume.
 
-On a phone, the desktop becomes a **pocket home**: an iOS-style status bar, a welcome widget, a four-column app grid, a Search pill, a four-icon dock, and full-screen app views with back and Home navigation. The same artwork, real content, and system blue carry through; the desktop chrome does not. The phone reader is a full-width document with a sticky bar.
+On a phone, the desktop becomes a **pocket home**: an iOS-style status bar, a welcome widget, a four-column app grid, a Search pill, a four-icon dock, and full-screen app views with back and Home navigation. The same artwork, real content, and system blue carry through; the desktop chrome does not. The phone README app is a full-screen document with the iOS app bar.
 
 **Key Characteristics:**
 - The user-supplied violet ASCII-hands artwork on near-black, full-bleed and fixed.
@@ -279,7 +279,7 @@ The palette is a staged room: the supplied violet artwork on near-black is the g
 
 ### Neutral
 - **Artwork Black** (`artwork-black`, `#0a0612`) and the artwork shades: the full-bleed ground and its top/bottom protection.
-- **Ivory** (`ivory`, `#f7f1e6`) and **Sand** (`sand`, `#e7dfcf`): the reader's paper field, no longer the desktop ground.
+- **Ivory** (`ivory`, `#f7f1e6`) and **Sand** (`sand`, `#e7dfcf`): the README app's paper field, no longer the desktop ground.
 - **Terminal Black** (`terminal`, `#0b0f13`): the one true-black app surface.
 - **Dark window** (`dark-window`, `dark-window-2`): the dark-mode app surfaces.
 - **Phone glass** (`ios-glass`, `ios-glass-border`): the iOS dock, Search pill, and widget transparency over the artwork.
@@ -290,7 +290,7 @@ The palette is a staged room: the supplied violet artwork on near-black is the g
 
 **The One Black Room Rule.** The Terminal is the one true-black app surface. The artwork is a near-black ground, not a UI surface; every app surface is white, graphite, or a project tone.
 
-**The Chrome-Only Blur Rule.** Backdrop blur belongs to desktop chrome (menu bar, dock, Controls, notifications) and the phone home's widget, dock, Search pill, and sheets. Content app surfaces and the reader stay opaque.
+**The Chrome-Only Blur Rule.** Backdrop blur belongs to desktop chrome (menu bar, dock, Controls, notifications) and the phone home's widget, dock, Search pill, and sheets. Content app surfaces, the README app, and the fallback stay opaque.
 
 **The Authored B Rule.** The B is an SVG path (`B_PATH`), never a font glyph. It appears in the welcome, menu bar, app icon, README file, favicon, and sleep screen — never over the artwork as a watermark. It is a geometric mark; the early "serif B" descriptor was retired at finish.
 
@@ -328,19 +328,19 @@ The palette is a staged room: the supplied violet artwork on near-black is the g
 
 The desktop is exactly one viewport tall (`100svh`, min 560px) and full-bleed. The menu bar is 28px; the dock floats 7px above the bottom edge; windows are positioned in percentages of the desktop so they compose at every width. The artwork is `cover`-cropped and center-positioned. The welcome window opens at 41% × 46% in the gap between the hands (29.5% / 18%); Work opens at 66% × 64%; Web at 68% × 68%; Notes at 54% × 60%; Terminal at 58% × 56%; Mail at 62% × 62%.
 
-The Work window is a three-column browser: 178px sidebar, fluid project grid, 236px preview. Notes is a 168px sidebar plus a 62ch note. Mail is 154px / 214px / fluid. The reader below is a 1000px window with a 70ch reading column.
+The Work window is a three-column browser: 178px sidebar, fluid project grid, 236px preview. Notes is a 168px sidebar plus a 62ch note. Mail is 154px / 214px / fluid. The README app is a 62% document window with a 70ch reading column.
 
 At **900px** the macOS desktop becomes a compact stack for tablets: one full-screen window at a time, the dock at the bottom, the notification hidden, and the welcome as a floating 590px-wide card with auto height. At **1180px** the Work and Mail side columns narrow and desktop icons hide.
 
-At **600px** and below — or a phone-height landscape (≤500px high and ≤900px wide) — the macOS shell is replaced by the iOS shell: a 44px status bar (plus safe area), welcome widget, four-column app grid, 44px Search pill, four-icon dock, and home indicator. App views use a 44px status bar, a 44px back/Home bar, and a full-height content pane. At **390×844** all seven home apps and the dock fit; at **320×568** the widget drops its lede and the app grid scrolls behind a soft fade; in phone landscape the widget and app grid sit in two columns. Inside iOS app frames, project rows and mail actions stack at 560px; the reader becomes a full-width document.
+At **600px** and below — or a phone-height landscape (≤500px high and ≤900px wide) — the macOS shell is replaced by the iOS shell: a 44px status bar (plus safe area), welcome widget, four-column app grid, 44px Search pill, four-icon dock, and home indicator. App views use a 44px status bar, a 44px back/Home bar, and a full-height content pane. At **390×844** all seven home apps and the dock fit; at **320×568** the widget drops its lede and the app grid scrolls behind a soft fade; in phone landscape the widget and app grid sit in two columns. Inside iOS app frames, project rows and mail actions stack at 560px; the README app becomes a full-screen document.
 
-The reader is the flat edition: every project, skill, and contact detail in semantic order. On a phone it is a full-width document with a sticky 44px bar and **Back to home**; on larger screens it is a 1000px window with **Back to desktop**. It prints on white with the OS hidden, project URLs appended, and the footer link removed.
+The README is the flat edition inside the OS: every project, skill, and contact detail in semantic order. It opens as a window on larger screens and as a full-screen iOS app on phones. A hidden flat fallback, not part of the interactive screen, renders for no-JS; it prints on white with the OS hidden, project URLs appended, and the footer link removed.
 
 ## Elevation & Depth
 
 Depth is window layering, not glass. Content windows are opaque and float on two shadows: a wide ambient shadow and a tight contact shadow. The active window gets a stronger pair. The dock and menu panels get a deeper chrome shadow. The artwork has no card, frame, or border; a soft top/bottom shade protects the chrome without veiling the hands.
 
-The menu bar and dock use a saturated backdrop blur because they sit over the artwork; that translucency is chrome, not content. The phone widget, dock, Search pill, and sheets use the same logic at 58% ink glass, while the iOS app surfaces and the reader remain opaque.
+The menu bar and dock use a saturated backdrop blur because they sit over the artwork; that translucency is chrome, not content. The phone widget, dock, Search pill, and sheets use the same logic at 58% ink glass, while the iOS app surfaces, the README app, and the fallback remain opaque.
 
 ### Shadow Vocabulary
 - **Window at rest** (`0 20px 50px rgba(30,28,22,.2), 0 2px 8px rgba(30,28,22,.1)`): a background app window.
@@ -364,7 +364,7 @@ The B is the one bespoke shape: a heavy, slightly squared geometric B with two c
 ## Components
 
 ### Menu Bar
-28px translucent bar: the B menu, the active app name, File / Edit / View / Window / Help, Search, Controls, Wi-Fi, battery, and a live date/time. Menus open on click, focus their first item, close on Escape, and return focus to the trigger. File, Edit, View, Window, and Help contain working commands: open Work, close/minimize/zoom, Copy, Reader Mode, full screen, Move Left/Right/Center, Bring All to Front.
+28px translucent bar: the B menu, the active app name, File / Edit / View / Window / Help, Search, Controls, Wi-Fi, battery, and a live date/time. Menus open on click, focus their first item, close on Escape, and return focus to the trigger. File, Edit, View, Window, and Help contain working commands: open Work, close/minimize/zoom, Copy, Open README, full screen, Move Left/Right/Center, Bring All to Front.
 
 ### Windows
 Opaque app frames with a 38px title bar, 24px traffic-light buttons, and drag-by-titlebar. Double-clicking the title bar zooms; the green button toggles a 98% × 88% zoom; the yellow button minimizes; the red button closes. A window can also be moved with **Window → Move Left / Move Right / Center** — no drag-only action.
@@ -373,7 +373,7 @@ Opaque app frames with a 38px title bar, 24px traffic-light buttons, and drag-by
 A floating translucent bar with Work, Notes, Terminal, Mail, Web, Apps, and Trash. Icons are 48px in 54px targets on desktop (40px in 44px on compact); a dot marks running apps; hover lifts the icon and names it. Apps opens the app grid; Trash opens the empty-state app.
 
 ### Welcome
-The first window, centered in the gap between the hands. A 64px authored B, the name, role, one-line thesis, **Open Work / Read About / Say Hello**, the four real projects as recent-work buttons, and a tip. On compact, the recent-work row is hidden, the tip switches to touch guidance, and the card fits its content so the artwork remains visible above and below. In no-JS, the actions and recent work are hidden and a banner points to the reader.
+The first window, centered in the gap between the hands. A 64px authored B, the name, role, one-line thesis, **Open Work / Read About / Say Hello**, the four real projects as recent-work buttons, and a tip. On compact, the recent-work row is hidden, the tip switches to touch guidance, and the card fits its content so the artwork remains visible above and below. In no-JS, the actions and recent work are hidden and a banner points to the static README fallback.
 
 ### Work
 A project browser: back/forward, search, grid/list toggle, Favourites and Projects sidebar, project tiles, and a preview pane with **Open project** and **Visit live site**. One tap opens a project on compact; double-click opens it on desktop. The search filters name, type, and description with a named empty state.
@@ -394,7 +394,7 @@ A browser-style frame with a URL field and a live-site button. A project page sh
 The system card: the B app icon, name, role, Portfolio OS 1.0, project count, toolkit, email, **Read About**, and **Say hello**.
 
 ### Search (Ctrl K / Cmd K)
-A Spotlight-style command surface with a combobox input, arrow-key selection, Enter to open, Escape to close, result counts announced, and focus returned to the trigger. It indexes apps, projects, skills, contacts, and the reader. On compact the placeholder shortens and the shortcut hint hides.
+A Spotlight-style command surface with a combobox input, arrow-key selection, Enter to open, Escape to close, result counts announced, and focus returned to the trigger. It indexes apps, projects, skills, contacts, and the README app. On compact the placeholder shortens and the shortcut hint hides.
 
 ### Apps
 A full-screen app grid with a filter field, Escape to close, a focus trap, and focus restoration. It lists Work, Notes, Terminal, Mail, Web, and About This Portfolio.
@@ -417,8 +417,8 @@ A full-screen search sheet with a 17px field, Cancel, the same app/project/skill
 ### Phone Controls
 A bottom sheet with a grabber, Appearance, Brightness, Focus, and Reader. It dims and blurs the home behind it, traps focus, closes on Escape or the scrim, and returns focus to the status-bar or widget trigger.
 
-### Reader
-The flat edition below the OS: About, Work, Skills, Contact, project URLs, real links, and a print stylesheet. On a phone it is a full-width document with a sticky 44px bar and **Back to home**; on larger screens it is the 1000px window. It is the screen-reader and no-JS edition, and it prints clean.
+### README App
+The flat edition inside the OS: About, Work, Skills, Contact, project URLs, real links, and a print stylesheet. It opens from the desktop README icon, the phone app grid, Search, Terminal, Launchpad, the menu bar, or the phone Controls sheet. It is a 62% window on larger screens and a full-screen iOS app on phones. A hidden flat fallback handles no-JS and print only; normal visitors never scroll below the OS.
 
 ## Do's and Don'ts
 
@@ -427,7 +427,7 @@ The flat edition below the OS: About, Work, Skills, Contact, project URLs, real 
 - **Do** keep the authored B path everywhere the mark appears.
 - **Do** keep the desktop's menu bar, dock, and windows working: drag, minimize, zoom, close, open, search, type.
 - **Do** keep the phone home native: iOS-style status bar, welcome widget, app grid, Search pill, dock, full-screen apps, and Controls sheet.
-- **Do** keep the three ways into contact: Mail, the welcome or widget Say Hello, and the reader.
+- **Do** keep the three ways into contact: Mail, the welcome or widget Say Hello, and the README app.
 - **Do** keep the original names Search, Apps, and Controls; never reintroduce Apple feature names.
 - **Do** keep the 44px phone targets, 24px desktop targets, 2px focus rings, keyboard routes, reduced-motion freeze, and no-JS reader.
 - **Do** keep the phone landscape and 320px layouts; the app grid and widget must remain reachable.

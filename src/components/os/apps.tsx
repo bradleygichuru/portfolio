@@ -33,13 +33,13 @@ import {
 } from "../../data/portfolio";
 import type { OpenOptions, Theme, WindowState } from "./types";
 import { AppIcon, BMark, ProjectGlyph } from "./icons";
+import { ReaderApp } from "./ReaderBody";
 
 export interface AppActions {
   open: (app: import("./types").AppId, opts?: OpenOptions) => void;
   close: () => void;
   theme: Theme;
   setTheme: (theme: Theme) => void;
-  reader: () => void;
 }
 
 export interface AppProps {
@@ -338,6 +338,8 @@ const appAliases: Record<string, import("./types").AppId> = {
   browser: "web",
   trash: "trash",
   aboutmac: "aboutMac",
+  readme: "readme",
+  reader: "readme",
 };
 
 function lineIdFactory() {
@@ -410,7 +412,7 @@ export function TerminalApp({ window: win, actions }: AppProps) {
               <li><b>contact</b> — email, phone, GitHub, LinkedIn</li>
               <li><b>ls</b> — what is on this machine</li>
               <li><b>open &lt;app|project&gt;</b> — open work, notes, mail, web, terminal, trash, or a project id</li>
-              <li><b>cat README.md</b> — open the reader edition</li>
+              <li><b>cat README.md</b> — open the README app</li>
               <li><b>theme</b> — toggle light/dark</li>
               <li><b>date</b> — the clock</li>
               <li><b>clear</b> — clear this window</li>
@@ -541,8 +543,8 @@ export function TerminalApp({ window: win, actions }: AppProps) {
 
     if (cmd === "cat") {
       if (argument.toLowerCase() === "readme.md" || argument.toLowerCase() === "readme") {
-        push({ kind: "ok", node: <>Opening README.md in Reader Mode…</> });
-        actions.reader();
+        push({ kind: "ok", node: <>Opening README.md…</> });
+        actions.open("readme");
         return;
       }
       push({ kind: "err", node: <>cat: {argument}: No such file</> });
@@ -556,8 +558,8 @@ export function TerminalApp({ window: win, actions }: AppProps) {
       }
       const target = argument.toLowerCase();
       if (target === "reader" || target === "readme") {
-        push({ kind: "ok", node: <>Opening Reader Mode…</> });
-        actions.reader();
+        push({ kind: "ok", node: <>Opening README.md…</> });
+        actions.open("readme");
         return;
       }
       const app = appAliases[target];
@@ -962,6 +964,8 @@ export function AppContent({ window, actions, compact }: AppProps) {
       return <WebApp window={window} actions={actions} />;
     case "aboutMac":
       return <AboutMacApp actions={actions} />;
+    case "readme":
+      return <ReaderApp />;
     case "trash":
       return <TrashApp />;
     default:

@@ -1,33 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import PortfolioOS from "../components/os/PortfolioOS";
-import {
-  ABOUT_BODY,
-  CONTACT_CHANNELS,
-  PROJECTS,
-  SITE,
-  SKILL_GROUPS,
-  VITALS,
-} from "../data/portfolio";
-import {
-  ArrowUp,
-  ArrowUpRight,
-  Github,
-  Linkedin,
-  Mail,
-  Phone,
-  type LucideIcon,
-} from "lucide-react";
-
-const year = new Date().getFullYear();
-const [emailLocal, emailDomain] = SITE.email.split("@") as [string, string];
-
-const ICONS: Record<string, LucideIcon> = {
-  mail: Mail,
-  phone: Phone,
-  github: Github,
-  linkedin: Linkedin,
-};
+import { ReaderBody } from "../components/os/ReaderBody";
+import { SITE } from "../data/portfolio";
 ---
 
 <Layout title={SITE.title} description={SITE.description}>
@@ -56,16 +31,24 @@ const ICONS: Record<string, LucideIcon> = {
         height: auto !important;
         min-height: 0 !important;
       }
+      .reader-fallback {
+        display: block !important;
+      }
     </style>
     <p class="noscript-banner">
-      JavaScript is off — this portfolio screen is static. The README below
-      has every project, skill, and contact detail.
+      JavaScript is off — this page is the static README. Every project, skill,
+      and contact detail is below.
+      <a href="#reader">Jump to the README</a>.
     </p>
   </noscript>
 
   <PortfolioOS client:load />
 
-  <section id="reader" class="reader" aria-labelledby="reader-title">
+  <section
+    id="reader"
+    class="reader reader-fallback"
+    aria-labelledby="reader-title"
+  >
     <div class="reader-window">
       <div class="reader-bar">
         <span class="reader-lights" aria-hidden="true">
@@ -78,107 +61,7 @@ const ICONS: Record<string, LucideIcon> = {
         </a>
       </div>
 
-      <div class="reader-body">
-        <h2 id="reader-title">{SITE.name}</h2>
-        <p class="reader-role">{SITE.role}</p>
-        <p class="reader-lede">
-          I build web and mobile products with modern technologies — and care
-          about the details that make them matter. This is the flat edition of
-          the portfolio, with every project, skill, and contact link in one place.
-        </p>
-
-        <section class="reader-section" aria-labelledby="reader-about">
-          <h3 id="reader-about">About</h3>
-          {ABOUT_BODY.map((paragraph) => <p>{paragraph}</p>)}
-          <dl class="reader-vitals">
-            {VITALS.map((vital) => (
-              <div>
-                <dt>{vital.label}</dt>
-                <dd>{vital.value}</dd>
-              </div>
-            ))}
-          </dl>
-        </section>
-
-        <section class="reader-section" aria-labelledby="reader-work">
-          <h3 id="reader-work">Work</h3>
-          <ul class="reader-projects">
-            {PROJECTS.map((project) => (
-              <li>
-                <div class="reader-project-head">
-                  <h4>{project.name}</h4>
-                  <a
-                    href={project.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={`Visit ${project.name}`}
-                  >
-                    Visit
-                    <ArrowUpRight size={12} aria-hidden="true" />
-                  </a>
-                </div>
-                <span class="reader-project-type">{project.type}</span>
-                <p>{project.description}</p>
-              </li>
-            ))}
-          </ul>
-        </section>
-
-        <section class="reader-section" aria-labelledby="reader-skills">
-          <h3 id="reader-skills">Skills</h3>
-          <div class="reader-skills">
-            {SKILL_GROUPS.map((group) => (
-              <div class="reader-skill-group">
-                <h4>{group.label}</h4>
-                <p>{group.items.join(" · ")}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section class="reader-section" aria-labelledby="reader-contact">
-          <h3 id="reader-contact">Contact</h3>
-          <div class="reader-contact">
-            <p>Interested in working together or just want to say hi?</p>
-            <a class="reader-email" href={`mailto:${SITE.email}`}>
-              {emailLocal}@<wbr />{emailDomain}
-            </a>
-            {CONTACT_CHANNELS.filter((channel) => channel.id !== "email").map(
-              (channel) => {
-                const Icon = ICONS[channel.icon];
-                return (
-                  <a
-                    class="reader-contact-row"
-                    href={channel.href}
-                    target={channel.external ? "_blank" : undefined}
-                    rel={channel.external ? "noopener noreferrer" : undefined}
-                  >
-                    <span>
-                      <Icon size={13} aria-hidden="true" /> {channel.label}
-                    </span>
-                    <span>{channel.value}</span>
-                  </a>
-                );
-              },
-            )}
-          </div>
-        </section>
-
-        <div class="reader-foot">
-          <span>End of README.md · {SITE.os}</span>
-          <a href="#desktop">
-            <ArrowUp size={12} aria-hidden="true" />
-            <span class="reader-foot-desktop">Back to desktop</span>
-            <span class="reader-foot-mobile">Back to home</span>
-          </a>
-        </div>
-      </div>
+      <ReaderBody backHref="#desktop" />
     </div>
   </section>
-
-  <footer class="os-footer">
-    <span>© {year} Bradley Gichuru</span>
-    <span>Portfolio OS 1.0</span>
-    <span>Built with Astro + React</span>
-  </footer>
 </Layout>

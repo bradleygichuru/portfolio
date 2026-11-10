@@ -79,6 +79,25 @@ export function AppIcon({ app, className = "" }: { app: AppId; className?: strin
     );
   }
 
+  if (app === "readme") {
+    return (
+      <svg {...common}>
+        <rect width="64" height="64" rx="14" fill="#eef3f8" />
+        <rect x="14" y="8" width="36" height="48" rx="4" fill="#fffdf4" />
+        <path d="M14 8h36v9H14z" fill="#dbe7f3" />
+        <g stroke="#a9b4bf" strokeWidth="1.5" strokeLinecap="round">
+          <path d="M21 26h22M21 32h22M21 38h16M21 44h20" />
+        </g>
+        <path
+          d={B_PATH}
+          transform="translate(34 12) scale(.16)"
+          fill="#0f4b4f"
+          fillRule="evenodd"
+        />
+      </svg>
+    );
+  }
+
   if (app === "trash") {
     return (
       <svg {...common}>

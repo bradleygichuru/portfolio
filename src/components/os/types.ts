@@ -8,6 +8,7 @@ export type AppId =
   | "contact"
   | "web"
   | "aboutMac"
+  | "readme"
   | "trash";
 
 export interface AppDef {
@@ -92,6 +93,16 @@ export const APP_DEFS: Record<AppId, AppDef> = {
     w: 37,
     h: 42,
   },
+  readme: {
+    id: "readme",
+    name: "README",
+    menu: "README",
+    title: "README.md — Editor",
+    x: 18,
+    y: 10,
+    w: 62,
+    h: 66,
+  },
   trash: {
     id: "trash",
     name: "Trash",
@@ -113,6 +124,7 @@ export const LAUNCHPAD_APPS: AppId[] = [
   "contact",
   "web",
   "aboutMac",
+  "readme",
 ];
 
 export interface WindowState {
@@ -144,6 +156,7 @@ export const APP_NAMES: Record<AppId, string> = {
   contact: "Mail",
   web: "Web",
   aboutMac: "About This Portfolio",
+  readme: "README",
   trash: "Trash",
 };
 

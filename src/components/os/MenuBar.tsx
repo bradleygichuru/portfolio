@@ -163,7 +163,7 @@ export function MenuBar({
       { label: "Web", run: () => onOpen("web") },
       "separator",
       { label: "Search", shortcut: "Ctrl K", run: onSpotlight },
-      { label: "Reader Mode", run: onReader },
+      { label: "Open README", run: onReader },
       {
         label: theme === "light" ? "Use Dark Appearance" : "Use Light Appearance",
         run: () => setTheme(theme === "light" ? "dark" : "light"),
@@ -206,7 +206,7 @@ export function MenuBar({
           label: theme === "light" ? "Use Dark Appearance" : "Use Light Appearance",
           run: () => setTheme(theme === "light" ? "dark" : "light"),
         },
-        { label: "Reader Mode", run: onReader },
+        { label: "Open README", run: onReader },
         { label: "Enter Full Screen", run: enterFullScreen },
       ],
     },
@@ -227,7 +227,7 @@ export function MenuBar({
       label: "Help",
       items: [
         { label: "Search", shortcut: "Ctrl K", run: onSpotlight },
-        { label: "Reader Mode", run: onReader },
+        { label: "Open README", run: onReader },
         { label: "About This Portfolio", run: onAbout },
       ],
     },

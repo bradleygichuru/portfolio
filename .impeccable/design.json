@@ -201,7 +201,7 @@
       "app-body": { "displayName": "App Body", "purpose": "Window copy, descriptions, notes, and metadata at 13px." },
       "display": { "displayName": "Display", "purpose": "The welcome name, 700 at 27–34px." },
       "app-title": { "displayName": "App Title", "purpose": "The Web project name, 700 at 28–40px." },
-      "reader-title": { "displayName": "Reader Title", "purpose": "The flat edition's name, 700 at 30–44px." },
+      "reader-title": { "displayName": "README Title", "purpose": "The README app's document title, 700 at 30–44px." },
       "label": { "displayName": "Label", "purpose": "Sidebar labels, preview types, metadata, and project kinds." },
       "mono": { "displayName": "Mono", "purpose": "Every Terminal command and output line." }
     },
@@ -288,7 +288,7 @@
     {
       "name": "Phone Controls Sheet",
       "kind": "dialog",
-      "description": "A bottom sheet with a grabber, Appearance, Brightness, Focus, and Reader. It blurs the home behind it, traps focus, and returns focus to its trigger.",
+      "description": "A bottom sheet with a grabber, Appearance, Brightness, Focus, and README. It blurs the home behind it, traps focus, and returns focus to its trigger.",
       "html": "<section class='ios-sheet' role='dialog' aria-modal='true' aria-label='Controls'><span class='ios-sheet-grabber'></span><header class='ios-sheet-head'><h2>Controls</h2><button class='ios-sheet-close' aria-label='Close controls'>×</button></header>…</section>",
       "css": ".ios-sheet{position:absolute;right:0;bottom:0;left:0;z-index:31;max-height:78%;overflow-y:auto;padding:10px 18px calc(22px + env(safe-area-inset-bottom));border-radius:24px 24px 0 0;background:var(--os-surface);box-shadow:0 -22px 60px rgba(0,0,0,.32);color:var(--os-text);animation:ios-sheet-in 320ms cubic-bezier(.2,.8,.2,1)}@keyframes ios-sheet-in{from{transform:translateY(100%)}}.ios-sheet-grabber{display:block;width:38px;height:5px;margin:0 auto 12px;border-radius:999px;background:var(--os-border-strong)}.ios-sheet-close{display:grid;width:44px;height:44px;place-items:center;border:0;border-radius:50%;background:var(--os-surface-2)}"
     },
@@ -304,7 +304,7 @@
   ],
   "narrative": {
     "northStar": "The Portfolio Desktop",
-    "overview": "The portfolio is a working Portfolio OS, not a webpage dressed as a laptop. On larger screens a visitor lands on the supplied violet ASCII-hands artwork on near-black, a translucent light menu bar, a dock, and a centered welcome window that names Bradley and puts the four live projects one click away. On a phone the same artwork becomes an iOS-style pocket home: a status bar, welcome widget, four-column app grid, Search pill, four-icon dock, full-screen app views, and a Controls sheet. There is no hardware frame; the screen is the page. The OS is the navigation and the proof. Work is a project browser; Notes is About; Terminal is Skills; Mail is Contact; Web is the project page; About This Portfolio is the system card. Search, Apps, and Controls are original features with original names. The flat reader below is the accessible, no-JS, printable edition. The tone is calm, precise, and quietly playful: a real tool you can use, not a costume.",
+    "overview": "The portfolio is a working Portfolio OS, not a webpage dressed as a laptop. On larger screens a visitor lands on the supplied violet ASCII-hands artwork on near-black, a translucent light menu bar, a dock, and a centered welcome window that names Bradley and puts the four live projects one click away. On a phone the same artwork becomes an iOS-style pocket home: a status bar, welcome widget, four-column app grid, Search pill, four-icon dock, full-screen app views, and a Controls sheet. There is no hardware frame; the screen is the page. The OS is the navigation and the proof. Work is a project browser; Notes is About; Terminal is Skills; Mail is Contact; Web is the project page; About This Portfolio is the system card; README is the flat edition. Search, Apps, and Controls are original features with original names. The README opens inside the OS; a hidden flat fallback serves no-JS and print only. The tone is calm, precise, and quietly playful: a real tool you can use, not a costume.",
     "keyCharacteristics": [
       "The user-supplied violet ASCII-hands artwork on near-black, full-bleed and fixed.",
       "Light windows by default; dark mode restages the windows, menu bar, dock, and tone colors while the artwork stays fixed.",
@@ -320,7 +320,7 @@
     "rules": [
       { "name": "The Lit Desktop Rule", "body": "Start with light windows. Dark mode restages the windows, chrome, and tone colors; the supplied artwork is the fixed ground in both modes.", "section": "colors" },
       { "name": "The One Black Room Rule", "body": "The Terminal is the one true-black app surface. The artwork is a near-black ground, not a UI surface; every app surface is white, graphite, or a project tone.", "section": "colors" },
-      { "name": "The Chrome-Only Blur Rule", "body": "Backdrop blur belongs to the menu bar, dock, Controls, and notifications. Content windows and the reader stay opaque.", "section": "elevation" },
+      { "name": "The Chrome-Only Blur Rule", "body": "Backdrop blur belongs to the menu bar, dock, Controls, and notifications. Content windows, the README app, and the fallback stay opaque.", "section": "elevation" },
       { "name": "The Authored B Rule", "body": "The B is an SVG path (B_PATH), never a font glyph. It appears in the welcome, menu bar, app icon, README file, favicon, and sleep screen, never as a watermark over the artwork.", "section": "shapes" },
       { "name": "The No-Apple-Names Rule", "body": "The features are Search, Apps, and Controls. No Apple logos, product names, feature names, Safari naming, or SF fonts.", "section": "colors" },
       { "name": "The Device Split Rule", "body": "Larger screens get the macOS-style desktop; phones get the iOS-style home and app views. Never shrink the desktop into a phone.", "section": "layout" },
@@ -335,12 +335,12 @@
       "Do keep the authored B path everywhere the mark appears.",
       "Do keep the desktop's menu bar, dock, and windows working: drag, minimize, zoom, close, open, search, type.",
       "Do keep the phone home native: iOS-style status bar, welcome widget, app grid, Search pill, dock, full-screen apps, and Controls sheet.",
-      "Do keep the three ways into contact: Mail, the welcome or widget Say Hello, and the reader.",
+      "Do keep the three ways into contact: Mail, the welcome or widget Say Hello, and the README app.",
       "Do keep the original names Search, Apps, and Controls; never reintroduce Apple feature names.",
-      "Do keep the 44px phone targets, 24px desktop targets, 2px focus rings, keyboard routes, reduced-motion freeze, and no-JS reader.",
+      "Do keep the 44px phone targets, 24px desktop targets, 2px focus rings, keyboard routes, reduced-motion freeze, and the no-JS README fallback.",
       "Do keep the phone landscape and 320px layouts; the app grid and widget must remain reachable.",
       "Do keep the dark mode a full restaging, not an inversion.",
-      "Do keep the print stylesheet: white reader, desktop hidden, project URLs visible."
+      "Do keep the print stylesheet: white README fallback, OS hidden, project URLs visible."
     ],
     "donts": [
       "Don't add laptop hardware, a notch, a keyboard deck, or a desk scene; the screen is the page.",

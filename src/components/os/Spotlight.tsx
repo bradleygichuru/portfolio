@@ -6,27 +6,25 @@ import {
   PROJECTS,
   SKILL_GROUPS,
 } from "../../data/portfolio";
-import { AppIcon, ProjectGlyph, ReadmeGlyph } from "./icons";
+import { AppIcon, ProjectGlyph } from "./icons";
 import { APP_NAMES, LAUNCHPAD_APPS } from "./types";
 import type { AppId } from "./types";
 
 interface SearchResult {
   id: string;
-  kind: "Application" | "Project" | "Skill" | "Contact" | "Reader";
+  kind: "Application" | "Project" | "Skill" | "Contact";
   title: string;
   subtitle: string;
   keywords: string;
   app?: AppId;
   project?: string;
   command?: string;
-  reader?: boolean;
 }
 
 interface SpotlightProps {
   open: boolean;
   onClose: () => void;
   onOpen: (app: AppId, opts?: { project?: string; command?: string }) => void;
-  onReader: () => void;
 }
 
 function buildIndex(): SearchResult[] {
@@ -75,14 +73,6 @@ function buildIndex(): SearchResult[] {
       keywords: `${channel.label} ${channel.value} contact`.toLowerCase(),
       app: "contact" as const,
     })),
-    {
-      id: "reader",
-      kind: "Reader",
-      title: "Reader Mode",
-      subtitle: "All the work, skills, and contact as text",
-      keywords: "reader readme text plain accessibility fallback",
-      reader: true,
-    },
   ];
   return results;
 }
@@ -94,13 +84,14 @@ const APP_SUBTITLES: Record<string, string> = {
   contact: "Contact and channels",
   web: "Project pages",
   aboutMac: "System card",
+  readme: "All work, skills, and contact",
   welcome: "Start here",
   trash: "Empty state",
 };
 
 const INDEX = buildIndex();
 
-export function Spotlight({ open, onClose, onOpen, onReader }: SpotlightProps) {
+export function Spotlight({ open, onClose, onOpen }: SpotlightProps) {
   const [query, setQuery] = useState("");
   const [selected, setSelected] = useState(0);
   const inputRef = useRef<HTMLInputElement | null>(null);
@@ -111,7 +102,7 @@ export function Spotlight({ open, onClose, onOpen, onReader }: SpotlightProps) {
     const q = query.trim().toLowerCase();
     if (!q) {
       return INDEX.filter(
-        (result) => result.kind === "Application" || result.kind === "Reader",
+        (result) => result.kind === "Application",
       ).slice(0, 8);
     }
     return INDEX.filter(
@@ -138,11 +129,6 @@ export function Spotlight({ open, onClose, onOpen, onReader }: SpotlightProps) {
 
   const openResult = (result: SearchResult | undefined) => {
     if (!result) return;
-    if (result.reader) {
-      onReader();
-      onClose();
-      return;
-    }
     if (result.app) {
       onOpen(result.app, {
         project: result.project,
@@ -255,9 +241,7 @@ export function Spotlight({ open, onClose, onOpen, onReader }: SpotlightProps) {
                 onClick={() => openResult(result)}
               >
                 <span className="spotlight-icon">
-                  {result.reader ? (
-                    <ReadmeGlyph />
-                  ) : result.project ? (
+                  {result.project ? (
                     <ProjectGlyph project={PROJECTS.find((project) => project.id === result.project)!} />
                   ) : result.app ? (
                     <AppIcon app={result.app} />

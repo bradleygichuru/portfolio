@@ -47,7 +47,7 @@ The OS is a portfolio interface, not a real operating system. It does not need t
 - Voice: first person, direct, unpretentious, quietly confident. No hype or invented claims.
 - The portfolio is an interactive, full-bleed Portfolio OS. Tablets and larger screens get a macOS-inspired desktop with draggable windows, menu bar, dock, Search, Apps, Controls, and a working local Terminal. Phones get an iOS-inspired home screen with a status bar, welcome widget, four-column app grid, Search pill, four-icon dock, full-screen app views, and a Controls sheet. The default appearance uses light windows; a dark mode is available. It uses original Portfolio OS naming and no Apple branding.
 - The desktop ground is the user-supplied violet ASCII-hands artwork (source: `wallhaven-7jmgey_1920x1080.png`; shipped as `src/assets/wallpaper.webp`). The B remains an authored mark in the welcome and chrome, not a wallpaper glyph. The artwork is decorative; all content remains HTML.
-- The OS uses the portfolio's real content as apps: Work, Notes/About, Terminal/Skills, Mail/Contact, a browser-style Web app for projects, and About This Portfolio. No Apple branding or logos.
+- The OS uses the portfolio's real content as apps: Work, Notes/About, Terminal/Skills, Mail/Contact, a browser-style Web app for projects, About This Portfolio, and a README app. No Apple branding or logos.
 - This is a binding creative direction. The previous solar-system world is explicitly scrapped.
 
 ## Evidence on Hand
@@ -62,10 +62,10 @@ The OS is a portfolio interface, not a real operating system. It does not need t
 1. **The OS is the proof.** A coherent, working interface demonstrates systems thinking better than a list of frameworks.
 2. **Meet the device.** The desktop is the right metaphor on a large screen; the phone gets a native-feeling home screen, not a shrunken desktop.
 3. **Depth on demand.** The first view stays legible; every app, window, and file hides real detail for visitors who explore.
-4. **One move to a conversation.** Mail, the menu bar or widget, and the reader all reach contact; never bury it behind the metaphor.
+4. **One move to a conversation.** Mail, the menu bar or widget, and the README app all reach contact; never bury it behind the metaphor.
 5. **Play is earned by clarity.** Windows drag, apps open, and Search finds things because the controls work, not because the visitor decodes a puzzle.
 6. **Tell the truth.** Use only the work, skills, and contact details that exist. The Terminal is a local interface, not a shell; no fake AI, metrics, or clients.
 
 ## Accessibility & Inclusion
 
-Target WCAG 2.2 AA: keyboard access to the menu bar, dock, windows, Search, Apps, and Terminal on larger screens; 44px phone touch targets; visible focus; meaningful window, app, and control labels; reduced-motion support; no content or action that depends on dragging or hover alone; and a reader/flat-text edition with all work, skills, and contact details for no-JS and screen-reader visitors.
+Target WCAG 2.2 AA: keyboard access to the menu bar, dock, windows, Search, Apps, and Terminal on larger screens; 44px phone touch targets; visible focus; meaningful window, app, and control labels; reduced-motion support; no content or action that depends on dragging or hover alone; and a README app inside the OS, plus a hidden flat-text fallback with all work, skills, and contact details for no-JS and print.

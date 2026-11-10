@@ -12,7 +12,7 @@ import {
 } from "lucide-react";
 import { AppContent } from "./apps";
 import type { AppActions } from "./apps";
-import { AppIcon, BMark, ReadmeGlyph } from "./icons";
+import { AppIcon, BMark } from "./icons";
 import { Spotlight } from "./Spotlight";
 import {
   APP_NAMES,
@@ -30,7 +30,6 @@ interface MobileOSProps {
   setBrightness: (value: number) => void;
   focusMode: boolean;
   setFocusMode: (value: boolean) => void;
-  reader: () => void;
 }
 
 interface Route {
@@ -47,6 +46,7 @@ const HOME_APPS: AppId[] = [
   "contact",
   "web",
   "aboutMac",
+  "readme",
 ];
 
 const DOCK_APPS: AppId[] = ["work", "about", "skills", "contact"];
@@ -112,7 +112,6 @@ export default function MobileOS({
   setBrightness,
   focusMode,
   setFocusMode,
-  reader,
 }: MobileOSProps) {
   const [stack, setStack] = useState<Route[]>([]);
   const [search, setSearch] = useState(false);
@@ -240,7 +239,6 @@ export default function MobileOS({
     close: goHome,
     theme,
     setTheme,
-    reader,
   };
 
   const routeKey = route
@@ -385,16 +383,6 @@ export default function MobileOS({
                     </span>
                   </button>
                 ))}
-                <button
-                  type="button"
-                  className="ios-app-button"
-                  onClick={reader}
-                >
-                  <span className="ios-app-icon ios-readme-icon">
-                    <ReadmeGlyph />
-                  </span>
-                  <span className="ios-app-label">README</span>
-                </button>
               </nav>
             </div>
 
@@ -433,10 +421,6 @@ export default function MobileOS({
         open={search}
         onClose={() => setSearch(false)}
         onOpen={openRoot}
-        onReader={() => {
-          setSearch(false);
-          reader();
-        }}
       />
 
       {controls && (
@@ -528,12 +512,9 @@ export default function MobileOS({
             <button
               type="button"
               className="os-button ios-sheet-reader"
-              onClick={() => {
-                closeControls();
-                reader();
-              }}
+              onClick={() => openRoot("readme")}
             >
-              Open Reader Mode
+              Open README
             </button>
           </section>
         </>

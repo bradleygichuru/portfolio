@@ -76,7 +76,6 @@ export default function PortfolioOS() {
 
   const zRef = useRef(10);
   const screenRef = useRef<HTMLElement | null>(null);
-  const reducedMotion = useMediaQuery("(prefers-reduced-motion: reduce)");
   const compact = useMediaQuery("(max-width: 900px)");
 
   const openApp = useCallback((app: AppId, opts?: OpenOptions) => {
@@ -220,12 +219,7 @@ export default function PortfolioOS() {
     if (top) setActiveId(top.id);
   }, [windows]);
 
-  const reader = useCallback(() => {
-    document.getElementById("reader")?.scrollIntoView({
-      behavior: reducedMotion ? "auto" : "smooth",
-      block: "start",
-    });
-  }, [reducedMotion]);
+  const reader = useCallback(() => openApp("readme"), [openApp]);
 
   const activeWindow =
     windows.find((win) => win.id === activeId && !win.minimized) ?? null;
@@ -243,9 +237,8 @@ export default function PortfolioOS() {
       },
       theme,
       setTheme,
-      reader,
     }),
-    [openApp, activeId, closeWindow, theme, reader],
+    [openApp, activeId, closeWindow, theme],
   );
 
   useEffect(() => {
@@ -377,10 +370,10 @@ export default function PortfolioOS() {
             type="button"
             className="desktop-icon"
             onClick={reader}
-            title="Open README.txt in Reader Mode"
+            title="Open README.md"
           >
             <ReadmeGlyph />
-            <span>README.txt</span>
+            <span>README.md</span>
           </button>
           <button
             type="button"
@@ -507,7 +500,7 @@ export default function PortfolioOS() {
                   reader();
                 }}
               >
-                Reader Mode
+                Open README
               </button>
               <button
                 type="button"
@@ -540,7 +533,6 @@ export default function PortfolioOS() {
           open={spotlight}
           onClose={() => setSpotlight(false)}
           onOpen={openApp}
-          onReader={reader}
         />
         <Launchpad
           open={launchpad}
@@ -556,7 +548,6 @@ export default function PortfolioOS() {
         setBrightness={setBrightness}
         focusMode={focusMode}
         setFocusMode={setFocusMode}
-        reader={reader}
       />
     </main>
   );
